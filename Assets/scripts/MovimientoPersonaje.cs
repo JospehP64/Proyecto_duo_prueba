@@ -6,10 +6,13 @@ using TMPro;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
-    int vida;
-    int energia;
+    int vida = 3;
+    int energia = 100;
     float velocidad;
-   
+    TextMeshProUGUI Textvida;
+    TextMeshProUGUI TextEnergia;
+
+
 
     Rigidbody rb;
 
@@ -22,6 +25,8 @@ public class MovimientoPersonaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Textvida.SetText("Vida: " + vida);
+        TextEnergia.SetText("Energía: " + energia);
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
         Vector3 movimiento = new Vector3(h, 0f, v) * velocidad * Time.deltaTime; ;
