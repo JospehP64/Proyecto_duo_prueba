@@ -9,8 +9,8 @@ public class MovimientoPersonaje : MonoBehaviour
     int vida = 3;
     int energia = 100;
     float velocidad;
-    TextMeshProUGUI Textvida;
-    TextMeshProUGUI TextEnergia;
+    [SerializeField] TextMeshProUGUI TextVida;
+    [SerializeField] TextMeshProUGUI TextEnergia;
 
 
 
@@ -25,8 +25,9 @@ public class MovimientoPersonaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Textvida.SetText("Vida: " + vida);
-        TextEnergia.SetText("Energía: " + energia);
+        TextVida.SetText("Vida: " + vida);
+        TextEnergia.SetText("energía: " + energia);
+        //
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
         Vector3 movimiento = new Vector3(h, 0f, v) * velocidad * Time.deltaTime; ;
