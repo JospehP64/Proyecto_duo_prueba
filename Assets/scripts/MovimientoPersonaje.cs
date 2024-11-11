@@ -11,6 +11,8 @@ public class MovimientoPersonaje : MonoBehaviour
     float velocidad;
     [SerializeField] TextMeshProUGUI TextVida;
     [SerializeField] TextMeshProUGUI TextEnergia;
+    Vector3 salto = new Vector3(0, 5, 0);
+    Vector3 direccionsalto = new Vector3(0, -5, 0);
 
 
 
@@ -30,6 +32,18 @@ public class MovimientoPersonaje : MonoBehaviour
         //
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
+        Movimiento(h, v);
+
+        if (Input.GetKey(KeyCode.Backspace))
+        {
+            if (Physics.Raycast(transform.position, direccionsalto))
+            rb.AddForce(salto * 10f, ForceMode.Impulse);
+        }
+
+    }
+
+    private void Movimiento(float h, float v)
+    {
         Vector3 movimiento = new Vector3(h, 0f, v) * velocidad * Time.deltaTime; ;
         transform.Translate(movimiento);
         if (Input.GetKey(KeyCode.LeftShift))
@@ -40,10 +54,5 @@ public class MovimientoPersonaje : MonoBehaviour
         {
             velocidad = 3;
         }
-
-
-        
-
-
     }
 }
