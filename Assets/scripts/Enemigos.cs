@@ -13,19 +13,28 @@ public class Enemigos : MonoBehaviour
     float angulo;
     Vector3 movimiento;
     Vector3 direccion;
+    float Distancia;
+    float DireccionMagnitud;
+    
 
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+         
     }
 
     // Update is called once per frame
     void Update()
     {
         direccion = Posicionjugador.position - transform.position;
+        
+        
+
         angulo = Mathf.Atan2(direccion.x, direccion.z) * Mathf.Rad2Deg;
+       
+        
         
         movimiento = direccion;
         
@@ -37,14 +46,16 @@ public class Enemigos : MonoBehaviour
 
     void movimientoEnemigo()
     {
-        if(angulo >= 0.10f)
+         
+        if(direccion.magnitude < 1)
         {
             rb.MovePosition(transform.position + (direccion * velocidadEnemigo * Time.deltaTime));
         }
-        else if(angulo <= 0.5f)
+        else if (direccion.magnitude > 1)
         {
-
+            
         }
-        
+        //Vector3.Distance(Posicionjugador.position, this.transform.position) < 1
+
     }
 }
