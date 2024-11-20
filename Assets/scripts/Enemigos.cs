@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemigos : MonoBehaviour
@@ -15,6 +16,8 @@ public class Enemigos : MonoBehaviour
     Vector3 direccion;
     float Distancia;
     float DireccionMagnitud;
+    float RadioDeAlcance = 0.1f;
+    float RadioDeAlcanceMaximo = 1f;
     
 
 
@@ -29,6 +32,9 @@ public class Enemigos : MonoBehaviour
     void Update()
     {
         direccion = Posicionjugador.position - transform.position;
+        Physics.SphereCast(transform.position, RadioDeAlcance, direccion, out RaycastHit EnemigoCollHit, 10);
+        Debug.DrawRay(transform.position,transform.forward, Color.red);
+        
         
         
 
@@ -47,15 +53,16 @@ public class Enemigos : MonoBehaviour
     void movimientoEnemigo()
     {
          
-        if(direccion.magnitude < 1)
+        if(Physics.SphereCast(transform.position, RadioDeAlcance, direccion, out RaycastHit EnemigoCollHit, 5))
         {
             rb.MovePosition(transform.position + (direccion * velocidadEnemigo * Time.deltaTime));
         }
-        else if (direccion.magnitude > 1)
+        else
         {
             
         }
         //Vector3.Distance(Posicionjugador.position, this.transform.position) < 1
 
     }
+    
 }

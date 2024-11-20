@@ -48,7 +48,7 @@ public class MovimientoPersonaje : MonoBehaviour
         transform.Translate(movimiento);
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            velocidad = 6;
+            velocidad = 8;
         }
         else
         {
