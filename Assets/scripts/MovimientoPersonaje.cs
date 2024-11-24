@@ -6,8 +6,12 @@ using TMPro;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
-    int vida = 3;
-    int energia = 100;
+    [SerializeField]GameObject sprite_personaje;
+    Enemigos enemy;
+   [SerializeField] Personajes_SO valor_personajes;
+   [SerializeField]Animator animatorPlayer;
+    int vida;
+    int energia;
     float velocidad;
     [SerializeField] TextMeshProUGUI TextVida;
     [SerializeField] TextMeshProUGUI TextEnergia;
@@ -21,7 +25,11 @@ public class MovimientoPersonaje : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sprite_personaje.transform.eulerAngles = new Vector3(0, 180, 0);
+        vida = valor_personajes.vida_personajes;
+        energia =  valor_personajes.energia_personajes;
         rb = GetComponent<Rigidbody>();
+        //animatorPlayer = GetComponent<Animator>.GetAnimatorPlayer();
     }
 
     // Update is called once per frame
@@ -32,6 +40,12 @@ public class MovimientoPersonaje : MonoBehaviour
         //
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
+        
+        if (Input.GetMouseButton(0))
+        {
+            animatorPlayer.SetTrigger("attack");
+        }
+        
         Movimiento(h, v);
 
         if (Input.GetKey(KeyCode.Backspace))
@@ -44,8 +58,27 @@ public class MovimientoPersonaje : MonoBehaviour
 
     private void Movimiento(float h, float v)
     {
-        Vector3 movimiento = new Vector3(h, 0f, v) * velocidad * Time.deltaTime; ;
+        Vector3 movimiento = new Vector3(h, 0f, v) * velocidad * Time.deltaTime; 
         transform.Translate(movimiento);
+        if (h > 0 || h > 0  && v > 0 || h > 0 && v < 0 )
+        {
+            animatorPlayer.SetBool("walking", true);
+            sprite_personaje.transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        else if (h < 0 || h < 0 && v > 0 || h < 0 && v < 0)
+        {
+            animatorPlayer.SetBool("walking", true);
+            sprite_personaje.transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else if (v > 0 || v < 0 )
+        {
+            animatorPlayer.SetBool("walking", true);
+        }
+        else
+        {
+            animatorPlayer.SetBool("walking", false);
+        }
+
         if (Input.GetKey(KeyCode.LeftShift))
         {
             velocidad = 8;

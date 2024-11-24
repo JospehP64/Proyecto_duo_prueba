@@ -6,11 +6,12 @@ using UnityEngine;
 public class Enemigos : MonoBehaviour
 {
     [SerializeField]Transform Posicionjugador;
+    Enemigos_SO Enem_SO;
     Rigidbody rb;
-    float vidaEnemigo;//es como la resistencia del enemigo
+    
     float velocidadEnemigo = 0.5f;
-    float ataqueEnemigo;
-    float rangoDeAlcance;
+
+    int vida_enemigo;
     float angulo;
     Vector3 movimiento;
     Vector3 direccion;
@@ -18,12 +19,16 @@ public class Enemigos : MonoBehaviour
     float DireccionMagnitud;
     float RadioDeAlcance = 0.1f;
     float RadioDeAlcanceMaximo = 1f;
+    [SerializeField] int resistencia;
+    
     
 
 
     // Start is called before the first frame update
     void Start()
     {
+        
+        
         rb = GetComponent<Rigidbody>();
          
     }
@@ -31,20 +36,26 @@ public class Enemigos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Movimiento_de_enemigo();
+
+    }
+
+    private void Movimiento_de_enemigo()
+    {
         direccion = Posicionjugador.position - transform.position;
         Physics.SphereCast(transform.position, RadioDeAlcance, direccion, out RaycastHit EnemigoCollHit, 10);
-        Debug.DrawRay(transform.position,transform.forward, Color.red);
-        
-        
-        
+        Debug.DrawRay(transform.position, transform.forward, Color.red);
+
+
+
 
         angulo = Mathf.Atan2(direccion.x, direccion.z) * Mathf.Rad2Deg;
-       
-        
-        
+
+
+
         movimiento = direccion;
-        
     }
+
     private void FixedUpdate()
     {
         movimientoEnemigo();

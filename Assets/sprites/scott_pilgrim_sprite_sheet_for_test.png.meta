@@ -1,0 +1,1359 @@
+fileFormatVersion: 2
+guid: 6fb9ce15f896e8844872c32c9e8a79c6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 423
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd421393758630499b87fe7adaf4e4d
+      internalID: 1795709819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 423
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a04b756943c46b4c8648ac6b69c7ad9
+      internalID: 1254902894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_2
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 423
+        width: 36
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95b6f2026487464b8d3d0b335207acf
+      internalID: 925446730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_3
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 423
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 892e790a5eb7193479e40ccceb7db851
+      internalID: -797683096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_4
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 423
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03a1d6eb3d8d44429e3e23a9768df18
+      internalID: -81534777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_5
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 423
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b480600d706d0a4aaef9e514dfa751e
+      internalID: 1316521399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_6
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 423
+        width: 36
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9462d6fe7db7294395e13b6bd8963db
+      internalID: 1845218814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_7
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 423
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df763740ae162a640b7b7cf876f24794
+      internalID: -1647412452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 345
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d73b8d0da354048a9a174bc0a77ec7
+      internalID: 695173130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_9
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 345
+        width: 43
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32c771b34dc32c44fa22a03da4f0fe98
+      internalID: -1205290958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_10
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 345
+        width: 53
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af5d2b25fd40ea4a82c4403c7ea218e
+      internalID: -301822352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_11
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 345
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a7a59d2bd385744b06c35e2e7b6123
+      internalID: 396111107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_12
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 345
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0a6db09c5317d41acc97947e52aff1
+      internalID: -1997450648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_13
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 345
+        width: 41
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1002d98fbf35646b093eb297db7b90
+      internalID: 2007334668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_14
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 345
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad66d2440ed5ae2468047105bc5ac68f
+      internalID: 363022743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_15
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 345
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1d359b84a53e245a4a26df41d04241
+      internalID: -1239981218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_16
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 282
+        width: 59
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311894fe0e6fff640b9c85512386f321
+      internalID: -1403147411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_17
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 282
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a52e74cae7e504183f708dbf135ab1
+      internalID: -105963479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_18
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 282
+        width: 70
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8882f11401fc6b944aa506ad990913ef
+      internalID: -1858323307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_19
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 282
+        width: 64
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654be82c94dc2d0488b779b65fe28af2
+      internalID: -604816206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_20
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 282
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ddd86d5db9f82945b3dfbf13ddbf6a0
+      internalID: 1683605337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_21
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 282
+        width: 65
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3212bebcedd42ed4a9f47f24a61b744e
+      internalID: -398375751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_22
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 249
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b983a3eec9d48894fb7901ba5af805f3
+      internalID: 961374557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_23
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 254
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2667ccc5a1463ee40aafbc667eceb92e
+      internalID: 608194343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_24
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 259
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850ff31adcbd5044db1218204186441f
+      internalID: -80490360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_25
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 246
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313c664bfe1cc5049930001661552eb8
+      internalID: -1098677445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_26
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 250
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c14545379db1a24b9685c08754f283e
+      internalID: -1901604574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_27
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 186
+        width: 51
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3bf0abea718054686dbd1861848076
+      internalID: -253467421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_28
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 186
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ce7a5bfb90f7144ab0885666145745
+      internalID: -670062396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_29
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 186
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f7dd6878611b140b9dbe5972d4834c
+      internalID: 443710599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_30
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 186
+        width: 49
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b75ecb7bfe35fe4490d7dce3e0bced4
+      internalID: -316386732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_31
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 236
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2047f23032997c439cd91f0707ed7c4
+      internalID: -1591142317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_32
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 229
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb254614462176418e205ef277e1278
+      internalID: -1727377465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_33
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 221
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53aa431457ea49d40b9e81bc9b47350e
+      internalID: 89681229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_34
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 225
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413f77d8fe734d74ab00b664fb9ae586
+      internalID: -206403858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_35
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 216
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a2b36ed0e38014ea707b330140c441
+      internalID: 837998692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_36
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 206
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aaef811792d2754893322ce81bfa392
+      internalID: -276399376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_37
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 202
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7131647382db00140b7fd9821fcfa376
+      internalID: -1091920934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_38
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 196
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f245798e68692a41b83926172c842a3
+      internalID: -126039561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_39
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 166
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af9ef9341a31a0a4a811adc9dd209328
+      internalID: 841343876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_40
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 171
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3983dc5f5a18ff641a91bac86ecf465f
+      internalID: -1913330839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_41
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 156
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3599b6efba69ec4e84b93234397fe94
+      internalID: 608744463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_42
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 159
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46656d0a0b6eea4e9a05d5a133fbd25
+      internalID: -1611682289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_43
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 161
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90192c333a8cece47b5a3a0b5211caf6
+      internalID: -2133972368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_44
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 99
+        width: 51
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67dfad6bf726bf7419c666d49b2ee202
+      internalID: -1175984043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_45
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 152
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9d98693c49ae84ab0abe421a32d6fa
+      internalID: 1130915268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_46
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 99
+        width: 63
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbcd2dfaabc200545bc29c2867060917
+      internalID: -618795143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_47
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 106
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2ec41afba360643b573681ebf49e8c
+      internalID: -731678852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_48
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 3
+        width: 41
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36063a309a1d54e4099937e96212c819
+      internalID: -629886936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_49
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 3
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fbf4448a47a3384590d107575050ea5
+      internalID: 1085390918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_50
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 3
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df0079e5980b5b4ca49674e9d36ad11
+      internalID: 1696011847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_51
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 3
+        width: 30
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3708fa87554304c84b4e548b5af94d
+      internalID: -363343712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_52
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 3
+        width: 33
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8096090af043a4ba5cf31633274ff6
+      internalID: -55107757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_53
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 3
+        width: 33
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda4cc323c83de042961b0d4f8f9d3c2
+      internalID: 487895721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_54
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 3
+        width: 33
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5364ec4ef31216048afca43b2691cf3a
+      internalID: 1975021284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_pilgrim_sprite_sheet_for_test_55
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 3
+        width: 42
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 440178ee4aa283b408b0bad5dae40cb4
+      internalID: -1317966723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9e0123ddce09fd74f99b11522aeb5d17
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      scott_pilgrim_sprite_sheet_for_test_0: 1795709819
+      scott_pilgrim_sprite_sheet_for_test_1: 1254902894
+      scott_pilgrim_sprite_sheet_for_test_10: -301822352
+      scott_pilgrim_sprite_sheet_for_test_11: 396111107
+      scott_pilgrim_sprite_sheet_for_test_12: -1997450648
+      scott_pilgrim_sprite_sheet_for_test_13: 2007334668
+      scott_pilgrim_sprite_sheet_for_test_14: 363022743
+      scott_pilgrim_sprite_sheet_for_test_15: -1239981218
+      scott_pilgrim_sprite_sheet_for_test_16: -1403147411
+      scott_pilgrim_sprite_sheet_for_test_17: -105963479
+      scott_pilgrim_sprite_sheet_for_test_18: -1858323307
+      scott_pilgrim_sprite_sheet_for_test_19: -604816206
+      scott_pilgrim_sprite_sheet_for_test_2: 925446730
+      scott_pilgrim_sprite_sheet_for_test_20: 1683605337
+      scott_pilgrim_sprite_sheet_for_test_21: -398375751
+      scott_pilgrim_sprite_sheet_for_test_22: 961374557
+      scott_pilgrim_sprite_sheet_for_test_23: 608194343
+      scott_pilgrim_sprite_sheet_for_test_24: -80490360
+      scott_pilgrim_sprite_sheet_for_test_25: -1098677445
+      scott_pilgrim_sprite_sheet_for_test_26: -1901604574
+      scott_pilgrim_sprite_sheet_for_test_27: -253467421
+      scott_pilgrim_sprite_sheet_for_test_28: -670062396
+      scott_pilgrim_sprite_sheet_for_test_29: 443710599
+      scott_pilgrim_sprite_sheet_for_test_3: -797683096
+      scott_pilgrim_sprite_sheet_for_test_30: -316386732
+      scott_pilgrim_sprite_sheet_for_test_31: -1591142317
+      scott_pilgrim_sprite_sheet_for_test_32: -1727377465
+      scott_pilgrim_sprite_sheet_for_test_33: 89681229
+      scott_pilgrim_sprite_sheet_for_test_34: -206403858
+      scott_pilgrim_sprite_sheet_for_test_35: 837998692
+      scott_pilgrim_sprite_sheet_for_test_36: -276399376
+      scott_pilgrim_sprite_sheet_for_test_37: -1091920934
+      scott_pilgrim_sprite_sheet_for_test_38: -126039561
+      scott_pilgrim_sprite_sheet_for_test_39: 841343876
+      scott_pilgrim_sprite_sheet_for_test_4: -81534777
+      scott_pilgrim_sprite_sheet_for_test_40: -1913330839
+      scott_pilgrim_sprite_sheet_for_test_41: 608744463
+      scott_pilgrim_sprite_sheet_for_test_42: -1611682289
+      scott_pilgrim_sprite_sheet_for_test_43: -2133972368
+      scott_pilgrim_sprite_sheet_for_test_44: -1175984043
+      scott_pilgrim_sprite_sheet_for_test_45: 1130915268
+      scott_pilgrim_sprite_sheet_for_test_46: -618795143
+      scott_pilgrim_sprite_sheet_for_test_47: -731678852
+      scott_pilgrim_sprite_sheet_for_test_48: -629886936
+      scott_pilgrim_sprite_sheet_for_test_49: 1085390918
+      scott_pilgrim_sprite_sheet_for_test_5: 1316521399
+      scott_pilgrim_sprite_sheet_for_test_50: 1696011847
+      scott_pilgrim_sprite_sheet_for_test_51: -363343712
+      scott_pilgrim_sprite_sheet_for_test_52: -55107757
+      scott_pilgrim_sprite_sheet_for_test_53: 487895721
+      scott_pilgrim_sprite_sheet_for_test_54: 1975021284
+      scott_pilgrim_sprite_sheet_for_test_55: -1317966723
+      scott_pilgrim_sprite_sheet_for_test_6: 1845218814
+      scott_pilgrim_sprite_sheet_for_test_7: -1647412452
+      scott_pilgrim_sprite_sheet_for_test_8: 695173130
+      scott_pilgrim_sprite_sheet_for_test_9: -1205290958
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
