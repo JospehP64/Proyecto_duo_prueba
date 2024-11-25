@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
+using static UnityEditor.PlayerSettings;
+using Unity.Burst.CompilerServices;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
+    
     [SerializeField]GameObject sprite_personaje;
     Enemigos enemy;
    [SerializeField] Personajes_SO valor_personajes;
@@ -16,8 +19,10 @@ public class MovimientoPersonaje : MonoBehaviour
     [SerializeField] TextMeshProUGUI TextVida;
     [SerializeField] TextMeshProUGUI TextEnergia;
     Vector3 salto = new Vector3(0, 5, 0);
-    Vector3 direccionsalto = new Vector3(0, -5, 0);
 
+   
+    
+    
 
 
     Rigidbody rb;
@@ -35,24 +40,29 @@ public class MovimientoPersonaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
+
         TextVida.SetText("Vida: " + vida);
         TextEnergia.SetText("energía: " + energia);
         //
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
         
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             animatorPlayer.SetTrigger("attack");
+            
         }
         
         Movimiento(h, v);
 
-        if (Input.GetKey(KeyCode.Backspace))
+        if (Input.GetKey(KeyCode.Space))
         {
-            if (Physics.Raycast(transform.position, direccionsalto))
+            
             rb.AddForce(salto * 10f, ForceMode.Impulse);
         }
+
 
     }
 
@@ -87,5 +97,10 @@ public class MovimientoPersonaje : MonoBehaviour
         {
             velocidad = 3;
         }
+        
     }
+    
+    
+
+
 }
