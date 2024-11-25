@@ -13,7 +13,7 @@ public class MovimientoPersonaje : MonoBehaviour
     Enemigos enemy;
    [SerializeField] Personajes_SO valor_personajes;
    [SerializeField]Animator animatorPlayer;
-    int vida;
+    public int vida;
     int energia;
     float velocidad;
     [SerializeField] TextMeshProUGUI TextVida;
@@ -99,8 +99,19 @@ public class MovimientoPersonaje : MonoBehaviour
         }
         
     }
-    
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("enemigo"))
+        {
+            vida--;
+        }
+        if (vida <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
 
 
 }
