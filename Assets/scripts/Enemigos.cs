@@ -28,8 +28,10 @@ public class Enemigos : MonoBehaviour
     void Start()
     {
         Posicionjugador = GameObject.FindGameObjectWithTag("Player");
+        
 
         resistencia = Enem_SO.resistencia;
+        
         
         rb = GetComponent<Rigidbody>();
          

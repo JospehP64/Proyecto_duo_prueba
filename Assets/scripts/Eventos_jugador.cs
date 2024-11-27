@@ -12,7 +12,8 @@ public class Eventos_jugador : MonoBehaviour
     PuntosDeSpawn SpawnPoints;// Coge la variable Spawnpoints.totalDeEnemigos para que, al destruir a un enemigo, se reste el numero de enemigos en escena y, si hay menos del total, se spawneen
     Enemigos Enemy;
     [SerializeField] Personajes_SO Char_SO;
-
+    //[SerializeField]int Enemy_life;
+    GameObject enemigos_ajenos;
     public int player_damage;
     [SerializeField]MovimientoPersonaje MovPersonaje;
     [SerializeField] RawImage rawCorazon;
@@ -25,8 +26,13 @@ public class Eventos_jugador : MonoBehaviour
     int vidaGUI;
     private void Start()
     {
+
         
-        player_damage = Char_SO.ataque_personajes;
+        //Enemy = GameObject.FindAnyObjectByType<Enemigos>(); //Para tomar el valor del codigo del enemigo //IMPORTANTE
+        
+
+
+        //player_damage = Char_SO.ataque_personajes;
 
         vidaGUI = MovPersonaje.vida;
         corazon01 = (RawImage)rawCorazon.GetComponent<RawImage>();
@@ -39,6 +45,7 @@ public class Eventos_jugador : MonoBehaviour
         corazon02.texture = (Texture)TexturaCorazon[0];
         corazon03.texture = (Texture)TexturaCorazon[0];
 
+        
     }
     private void Update()
     {
@@ -85,10 +92,10 @@ public class Eventos_jugador : MonoBehaviour
             {
                 if (playerhit.transform.gameObject.CompareTag("enemigo"))
                 {
-                    
-                    Destroy(playerhit.transform.gameObject);
-                    
-                    //Enemy.resistencia. =- player_damage;
+
+                    // Destroy(playerhit.transform.gameObject);
+
+                    Enemy.resistencia = Enemy.resistencia - 1;
                 }
                     
             }
