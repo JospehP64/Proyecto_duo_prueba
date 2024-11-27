@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf34e561955ee7542b6263a9c74bffd8, type: 3}
   m_Name: Datos_Enemigos
   m_EditorClassIdentifier: 
-  resistencia: 0
-  velocidad: 0
-  ataque: 0
-  defensa: 0
+  resistencia: 3
+  velocidad_enemigos: 0
+  ataque_enemigos: 0

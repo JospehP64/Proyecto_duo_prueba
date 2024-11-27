@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class Enemigos : MonoBehaviour
 {
-    [SerializeField]Transform Posicionjugador;
-    Enemigos_SO Enem_SO;
+    GameObject Posicionjugador;
+    [SerializeField]Enemigos_SO Enem_SO;
     Rigidbody rb;
     
     float velocidadEnemigo = 0.5f;
 
-    int vida_enemigo;
+   
     float angulo;
     Vector3 movimiento;
     Vector3 direccion;
@@ -19,7 +19,7 @@ public class Enemigos : MonoBehaviour
     float DireccionMagnitud;
     float RadioDeAlcance = 0.1f;
     float RadioDeAlcanceMaximo = 1f;
-    [SerializeField] int resistencia;
+    public int resistencia;
     
     
 
@@ -27,7 +27,9 @@ public class Enemigos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Posicionjugador = GameObject.FindGameObjectWithTag("Player");
+
+        resistencia = Enem_SO.resistencia;
         
         rb = GetComponent<Rigidbody>();
          
@@ -38,11 +40,16 @@ public class Enemigos : MonoBehaviour
     {
         Movimiento_de_enemigo();
 
+        if (resistencia <= 0)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     private void Movimiento_de_enemigo()
     {
-        direccion = Posicionjugador.position - transform.position;
+        direccion = Posicionjugador.transform.position - transform.position;
         Physics.SphereCast(transform.position, RadioDeAlcance, direccion, out RaycastHit EnemigoCollHit, 10);
         Debug.DrawRay(transform.position, transform.forward, Color.red);
 
@@ -59,6 +66,7 @@ public class Enemigos : MonoBehaviour
     private void FixedUpdate()
     {
         movimientoEnemigo();
+
     }
 
     void movimientoEnemigo()

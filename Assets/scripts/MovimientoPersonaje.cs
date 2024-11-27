@@ -104,10 +104,13 @@ public class MovimientoPersonaje : MonoBehaviour
         if (collision.gameObject.CompareTag("enemigo"))
         {
             vida--;
+            animatorPlayer.SetTrigger("recieve damage");
         }
         if (vida <= 0)
         {
             Destroy(gameObject);
+            
+
         }
     }
 

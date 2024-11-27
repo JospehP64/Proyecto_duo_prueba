@@ -6,23 +6,54 @@ public class PuntosDeSpawn : MonoBehaviour
 {
     [SerializeField] Transform[] PuntosDeSpawneo;
     [SerializeField] GameObject Enemigos;
+    public int totalDeEnemigos;
+    
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(InvocarEnemigos());
-        Instantiate(Enemigos, PuntosDeSpawneo[0].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
-        Instantiate(Enemigos, PuntosDeSpawneo[1].position, Quaternion.identity);
-        Instantiate(Enemigos, PuntosDeSpawneo[2].position, Quaternion.identity);
-        Instantiate(Enemigos, PuntosDeSpawneo[3].position, Quaternion.identity);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (totalDeEnemigos < 4)
+        {
+            for (int spawntime = 0; spawntime < 20; spawntime++)
+            {
+                if (spawntime >= 20)
+                {
+
+                    StartCoroutine(InvocarEnemigos());
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+        else if (totalDeEnemigos >= 4)
+        {
+
+        }
         
     }
     IEnumerator InvocarEnemigos()
     {
+        
+        Instantiate(Enemigos, PuntosDeSpawneo[0].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
+        totalDeEnemigos++;
+        yield return new WaitForSeconds(1);
+        Instantiate(Enemigos, PuntosDeSpawneo[1].position, Quaternion.identity);
+        totalDeEnemigos++;
+        yield return new WaitForSeconds(1);
+        Instantiate(Enemigos, PuntosDeSpawneo[2].position, Quaternion.identity);
+        totalDeEnemigos++;
+        yield return new WaitForSeconds(1);
+        Instantiate(Enemigos, PuntosDeSpawneo[3].position, Quaternion.identity);
+        totalDeEnemigos++;
         yield return new WaitForSeconds(1);
     }
 }

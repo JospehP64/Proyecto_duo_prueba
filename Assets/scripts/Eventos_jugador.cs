@@ -9,6 +9,11 @@ using UnityEngine.UI;
 
 public class Eventos_jugador : MonoBehaviour
 {
+    PuntosDeSpawn SpawnPoints;// Coge la variable Spawnpoints.totalDeEnemigos para que, al destruir a un enemigo, se reste el numero de enemigos en escena y, si hay menos del total, se spawneen
+    Enemigos Enemy;
+    [SerializeField] Personajes_SO Char_SO;
+
+    public int player_damage;
     [SerializeField]MovimientoPersonaje MovPersonaje;
     [SerializeField] RawImage rawCorazon;
     [SerializeField] RawImage rawCorazon_2;
@@ -20,6 +25,9 @@ public class Eventos_jugador : MonoBehaviour
     int vidaGUI;
     private void Start()
     {
+        
+        player_damage = Char_SO.ataque_personajes;
+
         vidaGUI = MovPersonaje.vida;
         corazon01 = (RawImage)rawCorazon.GetComponent<RawImage>();
         corazon02 = (RawImage)rawCorazon_2.GetComponent<RawImage>();
@@ -34,6 +42,8 @@ public class Eventos_jugador : MonoBehaviour
     }
     private void Update()
     {
+        
+
         vidaGUI =  MovPersonaje.vida;
         if (vidaGUI >= 3)
         {
@@ -64,19 +74,28 @@ public class Eventos_jugador : MonoBehaviour
     public void player_melee_attack()
     {
         
-         
-        RaycastHit hit;
+
+
         AnimationEvent attackevent = new AnimationEvent();
+
         
-        Physics.Raycast(transform.position, transform.right, 30);
-        Debug.DrawLine(transform.position, transform.right, Color.yellow);
-        if (Physics.Raycast(transform.position, transform.right, out hit))
+        if (Input.GetMouseButton(0))
         {
-            if (hit.transform.gameObject.CompareTag("enemigo"))
+            if (Physics.SphereCast(transform.position, 0.75f, transform.right, out RaycastHit playerhit, 3f))
             {
-                Destroy(hit.transform.gameObject);
+                if (playerhit.transform.gameObject.CompareTag("enemigo"))
+                {
+                    
+                    Destroy(playerhit.transform.gameObject);
+                    
+                    //Enemy.resistencia. =- player_damage;
+                }
+                    
             }
         }
+       
+
+        
 
 
     }
