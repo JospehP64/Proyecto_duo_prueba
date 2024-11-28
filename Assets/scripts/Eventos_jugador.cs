@@ -28,7 +28,7 @@ public class Eventos_jugador : MonoBehaviour
     {
 
         
-        //Enemy = GameObject.FindAnyObjectByType<Enemigos>(); //Para tomar el valor del codigo del enemigo //IMPORTANTE
+       // Enemy = GameObject.FindAnyObjectByType<Enemigos>(); //Para tomar el valor del codigo del enemigo //IMPORTANTE
         
 
 
@@ -93,9 +93,8 @@ public class Eventos_jugador : MonoBehaviour
                 if (playerhit.transform.gameObject.CompareTag("enemigo"))
                 {
 
-                    // Destroy(playerhit.transform.gameObject);
-
-                    Enemy.resistencia = Enemy.resistencia - 1;
+                    
+                    playerhit.collider.gameObject.GetComponent<Enemigos>().enemigo_Recibe_Ataque();//Llama al metodo "Enemig_Recibe_Ataque" del script "Enemigos"
                 }
                     
             }

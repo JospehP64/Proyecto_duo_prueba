@@ -57,6 +57,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72d45f705cac754a96877fdac4dc3ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Spawnpoints: {fileID: 0}
+  Char_SO: {fileID: 11400000, guid: 347040ac8acc9244dbfb1787d3196a2c, type: 2}
   Enem_SO: {fileID: 11400000, guid: 4620338992bb039479c5e6d041e2eff8, type: 2}
   resistencia: 3
 --- !u!23 &3042543268911515347

@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class Enemigos : MonoBehaviour
 {
+    [SerializeField]PuntosDeSpawn Spawnpoints;
+
+    [SerializeField] Personajes_SO Char_SO;
+
     GameObject Posicionjugador;
     [SerializeField]Enemigos_SO Enem_SO;
     Rigidbody rb;
@@ -27,14 +31,15 @@ public class Enemigos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         Posicionjugador = GameObject.FindGameObjectWithTag("Player");
         
 
         resistencia = Enem_SO.resistencia;
-        
+
         
         rb = GetComponent<Rigidbody>();
-         
+        
     }
 
     // Update is called once per frame
@@ -42,9 +47,12 @@ public class Enemigos : MonoBehaviour
     {
         Movimiento_de_enemigo();
 
+        
         if (resistencia <= 0)
         {
+            PuntosDeSpawn.totalDeEnemigos--;
             Destroy(gameObject);
+
         }
 
     }
@@ -84,6 +92,12 @@ public class Enemigos : MonoBehaviour
         }
         //Vector3.Distance(Posicionjugador.position, this.transform.position) < 1
 
+    }
+
+    public void enemigo_Recibe_Ataque()//Cuando es llamado por "Eventos_jugador", el enemigo recibe daño
+    {
+        resistencia = resistencia - Char_SO.ataque_personajes;
+        
     }
     
 }

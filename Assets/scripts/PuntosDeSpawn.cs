@@ -6,11 +6,13 @@ public class PuntosDeSpawn : MonoBehaviour
 {
     [SerializeField] Transform[] PuntosDeSpawneo;
     [SerializeField] GameObject Enemigos;
-    public int totalDeEnemigos;
+    public static int totalDeEnemigos; //URGENTE
+    [SerializeField] int enemycount;
     
     // Start is called before the first frame update
     void Start()
     {
+        enemycount = totalDeEnemigos;
         StartCoroutine(InvocarEnemigos());
         
     }
@@ -18,11 +20,11 @@ public class PuntosDeSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (totalDeEnemigos < 4)
+        if (totalDeEnemigos < 4 && totalDeEnemigos > 0)
         {
-            for (int spawntime = 0; spawntime < 20; spawntime++)
+            for (int spawntime = 0; spawntime < 20; spawntime++)//URGENTE. ERROR
             {
-                if (spawntime >= 20)
+                if (spawntime <= 20)
                 {
 
                     StartCoroutine(InvocarEnemigos());
