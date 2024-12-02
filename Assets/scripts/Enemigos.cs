@@ -31,7 +31,7 @@ public class Enemigos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+       Spawnpoints = GetComponent<PuntosDeSpawn>();
         Posicionjugador = GameObject.FindGameObjectWithTag("Player");
         
 
