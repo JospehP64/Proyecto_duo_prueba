@@ -20,15 +20,15 @@ public class PuntosDeSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (totalDeEnemigos < 4 && totalDeEnemigos > 0)
+        if (totalDeEnemigos < 1 && totalDeEnemigos >= 0)
         {
-            for (int spawntime = 0; spawntime < 20; spawntime++)//URGENTE. ERROR
+            for (int spawntime = 0; spawntime < 4; spawntime+=1)//URGENTE. ERROR
             {
-                if (spawntime <= 20)
+                if (spawntime <= 1)
                 {
 
                     StartCoroutine(InvocarEnemigos());
-
+                    
                 }
                 else
                 {
@@ -44,18 +44,18 @@ public class PuntosDeSpawn : MonoBehaviour
     }
     IEnumerator InvocarEnemigos()
     {
-        
+        yield return new WaitForSeconds(1);
         Instantiate(Enemigos, PuntosDeSpawneo[0].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
-        totalDeEnemigos++;
+        totalDeEnemigos += 1;
         yield return new WaitForSeconds(1);
         Instantiate(Enemigos, PuntosDeSpawneo[1].position, Quaternion.identity);
-        totalDeEnemigos++;
+        totalDeEnemigos += 1;
         yield return new WaitForSeconds(1);
         Instantiate(Enemigos, PuntosDeSpawneo[2].position, Quaternion.identity);
-        totalDeEnemigos++;
+        totalDeEnemigos += 1;
         yield return new WaitForSeconds(1);
         Instantiate(Enemigos, PuntosDeSpawneo[3].position, Quaternion.identity);
-        totalDeEnemigos++;
+        totalDeEnemigos += 1;
         yield return new WaitForSeconds(1);
     }
 }

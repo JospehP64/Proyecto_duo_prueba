@@ -14,11 +14,11 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
-  m_FogDensity: 0.01
-  m_LinearFogStart: 0
+  m_Fog: 1
+  m_FogColor: {r: 0.29147384, g: 0.31678376, b: 0.4716981, a: 1}
+  m_FogMode: 2
+  m_FogDensity: 0.05
+  m_LinearFogStart: -1.48
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
@@ -976,7 +976,7 @@ Skybox:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   m_Enabled: 1
-  m_CustomSkybox: {fileID: 2100000, guid: 7591025c0e638644f983aa6fe628c470, type: 2}
+  m_CustomSkybox: {fileID: 2100000, guid: c494c335823f54b52b2e87e1b7a63a23, type: 2}
 --- !u!1001 &362812620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2791,7 +2791,7 @@ MonoBehaviour:
   - {fileID: 1421745633}
   Enemigos: {fileID: 2530477218101224787, guid: e66d47f2a40f0dc45a22f014e36110b3,
     type: 3}
-  totalDeEnemigos: 0
+  enemycount: 0
 --- !u!1 &1584956058
 GameObject:
   m_ObjectHideFlags: 0
@@ -3620,79 +3620,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62fd1656e8444a2459a13341077ad572, type: 3}
---- !u!1001 &4292134639269511971
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2530477218101224787, guid: e66d47f2a40f0dc45a22f014e36110b3,
-        type: 3}
-      propertyPath: m_Name
-      value: Enemigo
-      objectReference: {fileID: 0}
-    - target: {fileID: 5748633577635769096, guid: e66d47f2a40f0dc45a22f014e36110b3,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 5748633577635769096, guid: e66d47f2a40f0dc45a22f014e36110b3,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.744851
-      objectReference: {fileID: 0}
-    - target: {fileID: 5748633577635769096, guid: e66d47f2a40f0dc45a22f014e36110b3,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 5748633577635769096, guid: e66d47f2a40f0dc45a22f014e36110b3,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5748633577635769096, guid: e66d47f2a40f0dc45a22f014e36110b3,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5748633577635769096, guid: e66d47f2a40f0dc45a22f014e36110b3,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5748633577635769096, guid: e66d47f2a40f0dc45a22f014e36110b3,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5748633577635769096, guid: e66d47f2a40f0dc45a22f014e36110b3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5748633577635769096, guid: e66d47f2a40f0dc45a22f014e36110b3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5748633577635769096, guid: e66d47f2a40f0dc45a22f014e36110b3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8466417006489366629, guid: e66d47f2a40f0dc45a22f014e36110b3,
-        type: 3}
-      propertyPath: Spawnpoints
-      value: 
-      objectReference: {fileID: 1582902289}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e66d47f2a40f0dc45a22f014e36110b3, type: 3}
 --- !u!1001 &6279897796414482144
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3865,7 +3792,6 @@ SceneRoots:
   - {fileID: 1405743150}
   - {fileID: 1513622019}
   - {fileID: 1421745633}
-  - {fileID: 4292134639269511971}
   - {fileID: 1582902288}
   - {fileID: 1048254204}
   - {fileID: 362812620}
