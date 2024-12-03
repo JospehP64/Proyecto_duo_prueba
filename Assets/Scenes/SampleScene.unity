@@ -2927,6 +2927,8 @@ MonoBehaviour:
   - {fileID: 1421745633}
   Enemigos: {fileID: 2530477218101224787, guid: e66d47f2a40f0dc45a22f014e36110b3,
     type: 3}
+  MiniBoss: {fileID: 2530477218101224787, guid: ac0dd9ac93c859142a42bd48898832ee,
+    type: 3}
 --- !u!1 &1584956058
 GameObject:
   m_ObjectHideFlags: 0

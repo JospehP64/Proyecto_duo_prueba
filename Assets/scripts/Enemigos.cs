@@ -13,7 +13,7 @@ public class Enemigos : MonoBehaviour
     [SerializeField]Enemigos_SO Enem_SO;
     Rigidbody rb;
     
-    float velocidadEnemigo = 0.5f;
+    [SerializeField]float velocidadEnemigo = 0.5f;
 
    
     float angulo;
@@ -21,8 +21,8 @@ public class Enemigos : MonoBehaviour
     Vector3 direccion;
     float Distancia;
     float DireccionMagnitud;
-    float RadioDeAlcance = 0.1f;
-    float RadioDeAlcanceMaximo = 1f;
+    [SerializeField]float RadioDeAlcance = 0.1f;
+    [SerializeField]float RadioDeAlcanceMaximo = 5f;
     public int resistencia;
     
     
@@ -45,7 +45,7 @@ public class Enemigos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movimiento_de_enemigo();
+        enemigo_detecta_jugador();
 
         
         if (resistencia <= 0)
@@ -57,10 +57,10 @@ public class Enemigos : MonoBehaviour
 
     }
 
-    private void Movimiento_de_enemigo()
+    private void enemigo_detecta_jugador()
     {
         direccion = Posicionjugador.transform.position - transform.position;
-        Physics.SphereCast(transform.position, RadioDeAlcance, direccion, out RaycastHit EnemigoCollHit, 10);
+        Physics.SphereCast(transform.position, RadioDeAlcance, direccion, out RaycastHit EnemigoCollHit, RadioDeAlcanceMaximo);
         Debug.DrawRay(transform.position, transform.forward, Color.red);
 
 
@@ -82,7 +82,7 @@ public class Enemigos : MonoBehaviour
     void movimientoEnemigo()
     {
          
-        if(Physics.SphereCast(transform.position, RadioDeAlcance, direccion, out RaycastHit EnemigoCollHit, 5))
+        if(Physics.SphereCast(transform.position, RadioDeAlcance, direccion, out RaycastHit EnemigoCollHit, RadioDeAlcanceMaximo))
         {
             rb.MovePosition(transform.position + (direccion * velocidadEnemigo * Time.deltaTime));
         }

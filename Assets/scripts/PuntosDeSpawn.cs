@@ -6,9 +6,10 @@ using TMPro;
 public class PuntosDeSpawn : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI TextoRondas;
-    int rondas = 1;
+    int rondas = 0;
     [SerializeField] Transform[] PuntosDeSpawneo;
     [SerializeField] GameObject Enemigos;
+    [SerializeField] GameObject MiniBoss;
     public static int totalDeEnemigos; //URGENTE
 
     private bool enEjecucion = false;
@@ -24,9 +25,10 @@ public class PuntosDeSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(rondas);
+        Debug.Log("Rondas: " + rondas);
         TextoRondas.SetText("Ronda: " + rondas);
-        Debug.Log(totalDeEnemigos);
+        Debug.Log("Total de enemigos " + totalDeEnemigos);
+        Debug.Log("RondasEnejecución: " + enEjecucion);
         ContarEnemigos();
 
     }
@@ -36,8 +38,18 @@ public class PuntosDeSpawn : MonoBehaviour
 
         if(totalDeEnemigos <= 0 && !enEjecucion)
         {
-            rondas += 1;
+            
             StartCoroutine(InvocarEnemigos());
+
+        }
+        if (rondas == 3 && enEjecucion && totalDeEnemigos <= 0)
+        {
+            enEjecucion = false;
+
+        }
+        if (rondas > 4)
+        {
+            rondas = 0;
         }
 
         //enemycount = totalDeEnemigos;
@@ -48,7 +60,7 @@ public class PuntosDeSpawn : MonoBehaviour
         //    {
         //        if (spawntime >= 4)
         //        {
-                    
+
         //            StartCoroutine(InvocarEnemigos());
         //            spawntime = 0;
         //        }
@@ -66,10 +78,16 @@ public class PuntosDeSpawn : MonoBehaviour
 
     IEnumerator InvocarEnemigos()
     {
-        
-        enEjecucion = true;
+
+        if (totalDeEnemigos <= 0 && !enEjecucion)
+        {
+            enEjecucion = true;
+
+        }
+        rondas += 1;
         if (rondas == 1)
         {
+            totalDeEnemigos = 0;
             yield return new WaitForSeconds(1);
             Instantiate(Enemigos, PuntosDeSpawneo[0].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
             totalDeEnemigos += 1;
@@ -80,7 +98,7 @@ public class PuntosDeSpawn : MonoBehaviour
             Instantiate(Enemigos, PuntosDeSpawneo[2].position, Quaternion.identity);
             totalDeEnemigos += 1;
             yield return new WaitForSeconds(1);
-            Instantiate(Enemigos, PuntosDeSpawneo[3].position, Quaternion.identity);
+            Instantiate(MiniBoss, PuntosDeSpawneo[3].position, Quaternion.identity);
             totalDeEnemigos += 1;
             yield return new WaitForSeconds(1);
         }
@@ -109,8 +127,61 @@ public class PuntosDeSpawn : MonoBehaviour
             totalDeEnemigos += 1;
             yield return new WaitForSeconds(1);
         }
-        
+        else if (rondas == 3)
+        {
+            totalDeEnemigos = 0;
+            yield return new WaitForSeconds(1);
+            Instantiate(Enemigos, PuntosDeSpawneo[0].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
+            totalDeEnemigos += 1;
+            yield return new WaitForSeconds(1);
+            Instantiate(Enemigos, PuntosDeSpawneo[1].position, Quaternion.identity);
+            totalDeEnemigos += 1;
+            yield return new WaitForSeconds(1);
+            Instantiate(Enemigos, PuntosDeSpawneo[2].position, Quaternion.identity);
+            totalDeEnemigos += 1;
+            yield return new WaitForSeconds(1);
+            Instantiate(Enemigos, PuntosDeSpawneo[3].position, Quaternion.identity);
+            totalDeEnemigos += 1;
+            yield return new WaitForSeconds(1);
+            Instantiate(Enemigos, PuntosDeSpawneo[0].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
+            totalDeEnemigos += 1;
+            yield return new WaitForSeconds(1);
+            Instantiate(Enemigos, PuntosDeSpawneo[1].position, Quaternion.identity);
+            totalDeEnemigos += 1;
+            yield return new WaitForSeconds(1);
+            Instantiate(Enemigos, PuntosDeSpawneo[2].position, Quaternion.identity);
+            totalDeEnemigos += 1;
+            yield return new WaitForSeconds(1);
+            Instantiate(Enemigos, PuntosDeSpawneo[3].position, Quaternion.identity);
+            totalDeEnemigos += 1;
+            yield return new WaitForSeconds(1);
+            Instantiate(Enemigos, PuntosDeSpawneo[4].position, Quaternion.identity);
+            totalDeEnemigos += 1;
+            yield return new WaitForSeconds(1);
+        }
+        else if (rondas == 4)
+        {
+            totalDeEnemigos = 0;
+            yield return new WaitForSeconds(1);
+            Instantiate(MiniBoss, PuntosDeSpawneo[0].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
+            totalDeEnemigos += 1;
+            yield return new WaitForSeconds(1);
+            Instantiate(Enemigos, PuntosDeSpawneo[1].position, Quaternion.identity);
+            totalDeEnemigos += 1;
+            yield return new WaitForSeconds(1);
+            Instantiate(Enemigos, PuntosDeSpawneo[2].position, Quaternion.identity);
+            totalDeEnemigos += 1;
+            yield return new WaitForSeconds(1);
+            Instantiate(Enemigos, PuntosDeSpawneo[3].position, Quaternion.identity);
+            totalDeEnemigos += 1;
+            yield return new WaitForSeconds(1);
+        }
+        if (totalDeEnemigos >= 0 && enEjecucion)
+        {
+            enEjecucion = false;
 
-        enEjecucion = false;
+        }
+        
+        
     }
 }
