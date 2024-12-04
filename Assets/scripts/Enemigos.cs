@@ -11,6 +11,7 @@ public class Enemigos : MonoBehaviour
 
     GameObject Posicionjugador;
     [SerializeField]Enemigos_SO Enem_SO;
+    [SerializeField] GameObject Drop_enemigo;
     Rigidbody rb;
     
     [SerializeField]float velocidadEnemigo = 0.5f;
@@ -51,7 +52,9 @@ public class Enemigos : MonoBehaviour
         if (resistencia <= 0)
         {
             PuntosDeSpawn.totalDeEnemigos--;
-            Destroy(gameObject);
+            Instantiate(Drop_enemigo, transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
+            
 
         }
 

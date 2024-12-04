@@ -6,11 +6,12 @@ TagManager:
   tags:
   - enemigo
   - spawnAdmin
+  - curable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - suelo
   - Water
   - UI
   - 

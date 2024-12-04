@@ -95,7 +95,7 @@ public class PuntosDeSpawn : MonoBehaviour
             yield return new WaitForSeconds(1);
 
             EnemyRandomizer = Random.Range(0, 2);
-            if (EnemyRandomizer == 0)
+            if (EnemyRandomizer <= 0)
             {
                 SpawnerRandomizer = Random.Range(0, 5);
                 
@@ -111,7 +111,7 @@ public class PuntosDeSpawn : MonoBehaviour
                 yield return new WaitForSeconds(1);
             }
             EnemyRandomizer = Random.Range(0, 2);
-            if (EnemyRandomizer == 0)
+            if (EnemyRandomizer <= 0)
             {
                 SpawnerRandomizer = Random.Range(0, 5);
 

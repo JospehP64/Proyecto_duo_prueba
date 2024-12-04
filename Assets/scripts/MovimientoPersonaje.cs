@@ -18,7 +18,7 @@ public class MovimientoPersonaje : MonoBehaviour
     float velocidad;
     [SerializeField] TextMeshProUGUI TextVida;
     [SerializeField] TextMeshProUGUI TextEnergia;
-    Vector3 salto = new Vector3(0, 5, 0);
+    Vector3 salto = new Vector3(0, 0.8f, 0);
 
    
     
@@ -57,11 +57,13 @@ public class MovimientoPersonaje : MonoBehaviour
         
         Movimiento(h, v);
 
-        if (Input.GetKey(KeyCode.Space))
-        {
-            
-            rb.AddForce(salto * 10f, ForceMode.Impulse);
-        }
+        //CORREGIR PROBLEMA EN EL FUTURO -  SALTO
+        //if (Input.GetKey(KeyCode.Space) && Physics.Raycast(transform.position, new Vector3(0, -0.01f, 0), LayerMask.GetMask("suelo")))
+        //{
+        //    
+        //    rb.AddForce(salto * 0.1f, ForceMode.Impulse);
+        //}
+
 
 
     }
@@ -112,6 +114,19 @@ public class MovimientoPersonaje : MonoBehaviour
             
 
         }
+        
+    }
+    private void OnTriggerEnter(Collider trigger)
+    {
+        if (vida < 3 && vida > 0)
+        {
+            if (trigger.gameObject.CompareTag("curable"))
+            {
+                vida++;
+                Destroy(trigger.gameObject);
+            }
+        }
+        
     }
 
 
