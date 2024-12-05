@@ -60,9 +60,11 @@ MonoBehaviour:
   Spawnpoints: {fileID: 0}
   Char_SO: {fileID: 11400000, guid: 347040ac8acc9244dbfb1787d3196a2c, type: 2}
   Enem_SO: {fileID: 11400000, guid: 4620338992bb039479c5e6d041e2eff8, type: 2}
+  Drop_enemigo: {fileID: 2237634037621769332, guid: fe03aabfbb8751d44b0373cc72c9ddf0,
+    type: 3}
   velocidadEnemigo: 0.2
-  RadioDeAlcance: 0.5
-  RadioDeAlcanceMaximo: 3
+  RadioDeAlcance: 5
+  RadioDeAlcanceMaximo: 10
   resistencia: 6
 --- !u!23 &3042543268911515347
 MeshRenderer:
