@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: normal_attack_animation
+  m_Name: Corredor_idle
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,17 +21,17 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: 37fa81f95bdbb67469a95b802e1f8f85, type: 3}
-    - time: 0.05
-      value: {fileID: 21300000, guid: 04a2e598244344a409c8b122ca52b259, type: 3}
-    - time: 0.1
-      value: {fileID: 21300000, guid: fedf0875d575c404cabc57be14e24bd8, type: 3}
-    - time: 0.15
-      value: {fileID: 21300000, guid: 84ac10cce453096458317a530a12455b, type: 3}
-    - time: 0.2
-      value: {fileID: 21300000, guid: 8a585eaaa1870b643906b956b76f017a, type: 3}
-    - time: 0.23333333
-      value: {fileID: 21300000, guid: 453881d5f9efb084aaaeaab220df9f45, type: 3}
+      value: {fileID: 21300000, guid: 8474b54aef2d4fa40a5340c861a3f34d, type: 3}
+    - time: 0.083333336
+      value: {fileID: 21300000, guid: 480a6737415e44247aa68b302565b7a0, type: 3}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: e87a94689c6d6af4caa6d41489346336, type: 3}
+    - time: 0.33333334
+      value: {fileID: 21300000, guid: 07b551b3ba18d0643b4bfdb8f00a9dfd, type: 3}
+    - time: 0.41666666
+      value: {fileID: 21300000, guid: 57aaf8598c175f24c96e021ec6a6ea21, type: 3}
+    - time: 0.5
+      value: {fileID: 21300000, guid: 8474b54aef2d4fa40a5340c861a3f34d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -54,18 +54,18 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 37fa81f95bdbb67469a95b802e1f8f85, type: 3}
-    - {fileID: 21300000, guid: 04a2e598244344a409c8b122ca52b259, type: 3}
-    - {fileID: 21300000, guid: fedf0875d575c404cabc57be14e24bd8, type: 3}
-    - {fileID: 21300000, guid: 84ac10cce453096458317a530a12455b, type: 3}
-    - {fileID: 21300000, guid: 8a585eaaa1870b643906b956b76f017a, type: 3}
-    - {fileID: 21300000, guid: 453881d5f9efb084aaaeaab220df9f45, type: 3}
+    - {fileID: 21300000, guid: 8474b54aef2d4fa40a5340c861a3f34d, type: 3}
+    - {fileID: 21300000, guid: 480a6737415e44247aa68b302565b7a0, type: 3}
+    - {fileID: 21300000, guid: e87a94689c6d6af4caa6d41489346336, type: 3}
+    - {fileID: 21300000, guid: 07b551b3ba18d0643b4bfdb8f00a9dfd, type: 3}
+    - {fileID: 21300000, guid: 57aaf8598c175f24c96e021ec6a6ea21, type: 3}
+    - {fileID: 21300000, guid: 8474b54aef2d4fa40a5340c861a3f34d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.25
+    m_StopTime: 0.51666665
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -84,18 +84,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.1
-    functionName: player_melee_attack
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.23333333
-    functionName: player_melee_attack
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []
