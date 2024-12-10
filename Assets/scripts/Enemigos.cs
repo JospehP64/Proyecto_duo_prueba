@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class Enemigos : MonoBehaviour
 {
+    [SerializeField] string variante;
     
-
     [SerializeField] GameObject EnemySprite;
 
     [SerializeField] Animator EnemyAnimator;
 
-    [SerializeField] bool[] Variantes;//Variante 01: corredor; variante 02: mago; variante 03; tanque
+    
     [SerializeField]PuntosDeSpawn Spawnpoints;
 
     [SerializeField] Personajes_SO Char_SO;
@@ -39,6 +39,8 @@ public class Enemigos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+
        Spawnpoints = GetComponent<PuntosDeSpawn>();
         Posicionjugador = GameObject.FindGameObjectWithTag("Player");
         
@@ -97,30 +99,20 @@ public class Enemigos : MonoBehaviour
 
         if (Physics.SphereCast(transform.position, RadioDeAlcance, direccion, out RaycastHit EnemigoCollHit, RadioDeAlcanceMaximo))
         {
-
-
+            if (variante == "corredor")
+            {
+                EnemyAnimator.SetBool("caminar_corredor", true);
+            }
             
-
-            if ( Posicionjugador.transform.position.x > 0 || Posicionjugador.transform.position.x> 0 && Posicionjugador.transform.position.y > 0 || Posicionjugador.transform.position.x > 0 && Posicionjugador.transform.position.y < 0)
-            {
-                EnemyAnimator.SetBool("caminar_corredor", true);
-                EnemySprite.transform.eulerAngles = new Vector3(0, 0, 0);
-            }
-            else if (transform.position.x < 0 || Posicionjugador.transform.position.x < 0 && Posicionjugador.transform.position.y > 0 || Posicionjugador.transform.position.x < 0 && Posicionjugador.transform.position.y < 0)
-            {
-                EnemyAnimator.SetBool("caminar_corredor", true);
-                EnemySprite.transform.eulerAngles = new Vector3(0, 180, 0);
-            }
-            else if (Posicionjugador.transform.position.x > 0 || Posicionjugador.transform.position.y < 0)
-            {
-                EnemyAnimator.SetBool("caminar_corredor", true);
-            }
-
             rb.MovePosition(transform.position + (direccion * velocidadEnemigo * Time.deltaTime));
         }
         else
         {
-            EnemyAnimator.SetBool("caminar_corredor", false);
+            if (variante == "corredor")
+            {
+                EnemyAnimator.SetBool("caminar_corredor", false);
+            }
+            
         }
         //Vector3.Distance(Posicionjugador.position, this.transform.position) < 1
 

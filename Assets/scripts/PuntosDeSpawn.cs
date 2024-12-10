@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class PuntosDeSpawn : MonoBehaviour
 {
+    
+    
+    
+
     [SerializeField] TextMeshProUGUI TextoRondas;
     int rondas = 0;
     [SerializeField] Transform[] PuntosDeSpawneo;
-    [SerializeField] GameObject[] Enemigos;
+    [SerializeField] GameObject[] MonstruosASpawnear;
     
     int EnemyRandomizer;//Para la posibilidad de que un enemigo aleatorio se genere dentro de cada ronda del juego
     
@@ -22,6 +27,11 @@ public class PuntosDeSpawn : MonoBehaviour
     void Start()
     {
         
+        
+
+
+        
+
         StartCoroutine(InvocarEnemigos());
         
     }
@@ -76,19 +86,22 @@ public class PuntosDeSpawn : MonoBehaviour
 
             for (int spawnCount = 0; spawnCount < 4; spawnCount++)
             {
+                
                 EnemyRandomizer = Random.Range(0, 2);
                 if (EnemyRandomizer <= 0)
                 {
+                    
                     SpawnerRandomizer = Random.Range(0, 5);
 
-                    Instantiate(Enemigos[0], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
+                    Instantiate(MonstruosASpawnear[0], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
                     totalDeEnemigos += 1;
                     yield return new WaitForSeconds(1);
                 }
                 else if (EnemyRandomizer >= 1)
                 {
+                    
                     SpawnerRandomizer = Random.Range(0, 5);
-                    Instantiate(Enemigos[1], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
+                    Instantiate(MonstruosASpawnear[1], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
                     totalDeEnemigos += 1;
                     yield return new WaitForSeconds(1);
                 }
@@ -98,73 +111,17 @@ public class PuntosDeSpawn : MonoBehaviour
         }
         else if (rondas == 2)
         {
-            for (int spawnCount = 0; spawnCount < 8; spawnCount++)
-            {
-                EnemyRandomizer = Random.Range(0, 2);
-                if (EnemyRandomizer <= 0)
-                {
-                    SpawnerRandomizer = Random.Range(0, 5);
 
-                    Instantiate(Enemigos[0], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
-                    totalDeEnemigos += 1;
-                    yield return new WaitForSeconds(1);
-                }
-                else if (EnemyRandomizer >= 1)
-                {
-                    SpawnerRandomizer = Random.Range(0, 5);
-                    Instantiate(Enemigos[1], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
-                    totalDeEnemigos += 1;
-                    yield return new WaitForSeconds(1);
-                }
-                EnemyRandomizer = Random.Range(0, 2);
-            }
+            
 
         }
         else if (rondas == 3)
         {
-            for (int spawnCount = 0; spawnCount < 12; spawnCount++)
-            {
-                EnemyRandomizer = Random.Range(0, 2);
-                if (EnemyRandomizer <= 0)
-                {
-                    SpawnerRandomizer = Random.Range(0, 5);
-
-                    Instantiate(Enemigos[0], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
-                    totalDeEnemigos += 1;
-                    yield return new WaitForSeconds(1);
-                }
-                else if (EnemyRandomizer >= 1)
-                {
-                    SpawnerRandomizer = Random.Range(0, 5);
-                    Instantiate(Enemigos[1], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
-                    totalDeEnemigos += 1;
-                    yield return new WaitForSeconds(1);
-                }
-                EnemyRandomizer = Random.Range(0, 2);
-            }
+            
         }
         else if (rondas == 4)
         {
-            for (int spawnCount = 0; spawnCount < 16; spawnCount++)
-            {
-                EnemyRandomizer = Random.Range(0, 2);
-                if (EnemyRandomizer <= 0)
-                {
-                    SpawnerRandomizer = Random.Range(0, 5);
-
-                    Instantiate(Enemigos[0], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
-                    totalDeEnemigos += 1;
-                    yield return new WaitForSeconds(1);
-                }
-                else if (EnemyRandomizer >= 1)
-                {
-                    SpawnerRandomizer = Random.Range(0, 5);
-                    Instantiate(Enemigos[1], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
-                    totalDeEnemigos += 1;
-                    yield return new WaitForSeconds(1);
-                }
-                EnemyRandomizer = Random.Range(0, 2);
-            }
+            
         }
         if (totalDeEnemigos >= 0 && enEjecucion)
         {
