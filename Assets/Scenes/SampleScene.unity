@@ -131,7 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 20069840}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Farolas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,6 +377,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1435362555}
     m_Modifications:
+    - target: {fileID: 749441454240950337, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402067489772744671, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4748365900534013157, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404498602447597424, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014330688296924468, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214964054128045802, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8524051460834170795, guid: d00e009b70189e54e858e42c65f280d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -431,6 +461,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Edificio Sobrenatural (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525857859288781939, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -754,7 +789,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 0
   m_ImplicitTensor: 0
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -957,7 +992,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 300231208}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Escenario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1084,6 +1119,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1435362555}
     m_Modifications:
+    - target: {fileID: 749441454240950337, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402067489772744671, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4748365900534013157, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404498602447597424, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014330688296924468, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214964054128045802, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8524051460834170795, guid: d00e009b70189e54e858e42c65f280d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1138,6 +1203,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Edificio Sobrenatural (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525857859288781939, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1347,6 +1417,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 20069840}
     m_Modifications:
+    - target: {fileID: 1955376567836182393, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061365618391258710, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4777807588836228814, guid: 62fd1656e8444a2459a13341077ad572,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1397,10 +1477,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4814404116939297483, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076631480536339554, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681109514648300553, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723014549861126589, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921941724922310217, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8469040236200881643, guid: 62fd1656e8444a2459a13341077ad572,
         type: 3}
       propertyPath: m_Name
       value: Farola (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469040236200881643, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1415,6 +1525,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 20069840}
     m_Modifications:
+    - target: {fileID: 1955376567836182393, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061365618391258710, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4777807588836228814, guid: 62fd1656e8444a2459a13341077ad572,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1465,10 +1585,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4814404116939297483, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076631480536339554, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681109514648300553, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723014549861126589, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921941724922310217, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8469040236200881643, guid: 62fd1656e8444a2459a13341077ad572,
         type: 3}
       propertyPath: m_Name
       value: Farola (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469040236200881643, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1735,6 +1885,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 20069840}
     m_Modifications:
+    - target: {fileID: 1955376567836182393, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061365618391258710, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4777807588836228814, guid: 62fd1656e8444a2459a13341077ad572,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1785,10 +1945,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4814404116939297483, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076631480536339554, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681109514648300553, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723014549861126589, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921941724922310217, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8469040236200881643, guid: 62fd1656e8444a2459a13341077ad572,
         type: 3}
       propertyPath: m_Name
       value: Farola (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469040236200881643, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1809,6 +1999,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1435362555}
     m_Modifications:
+    - target: {fileID: 749441454240950337, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402067489772744671, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4748365900534013157, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404498602447597424, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014330688296924468, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214964054128045802, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8524051460834170795, guid: d00e009b70189e54e858e42c65f280d7,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1878,6 +2098,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Edificio Sobrenatural (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525857859288781939, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2053,6 +2278,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1435362555}
     m_Modifications:
+    - target: {fileID: 749441454240950337, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402067489772744671, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4748365900534013157, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404498602447597424, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014330688296924468, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214964054128045802, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8524051460834170795, guid: d00e009b70189e54e858e42c65f280d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2108,6 +2363,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Edificio Sobrenatural (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8525857859288781939, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2127,6 +2387,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1435362555}
     m_Modifications:
+    - target: {fileID: 749441454240950337, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402067489772744671, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4748365900534013157, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404498602447597424, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014330688296924468, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214964054128045802, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8524051460834170795, guid: d00e009b70189e54e858e42c65f280d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2182,6 +2472,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Edificio Sobrenatural (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8525857859288781939, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2206,7 +2501,7 @@ GameObject:
   - component: {fileID: 740792459}
   - component: {fileID: 740792458}
   - component: {fileID: 740792462}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Suelo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2335,6 +2630,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1435362555}
     m_Modifications:
+    - target: {fileID: 749441454240950337, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402067489772744671, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4748365900534013157, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404498602447597424, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014330688296924468, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214964054128045802, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8524051460834170795, guid: d00e009b70189e54e858e42c65f280d7,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2404,6 +2729,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Edificio Sobrenatural (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525857859288781939, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2850,6 +3180,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 20069840}
     m_Modifications:
+    - target: {fileID: 1955376567836182393, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061365618391258710, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4777807588836228814, guid: 62fd1656e8444a2459a13341077ad572,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2900,10 +3240,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4814404116939297483, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076631480536339554, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681109514648300553, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723014549861126589, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921941724922310217, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8469040236200881643, guid: 62fd1656e8444a2459a13341077ad572,
         type: 3}
       propertyPath: m_Name
       value: Farola (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469040236200881643, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3141,6 +3511,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 20069840}
     m_Modifications:
+    - target: {fileID: 1955376567836182393, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061365618391258710, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4777807588836228814, guid: 62fd1656e8444a2459a13341077ad572,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3191,10 +3571,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4814404116939297483, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076631480536339554, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681109514648300553, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723014549861126589, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921941724922310217, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8469040236200881643, guid: 62fd1656e8444a2459a13341077ad572,
         type: 3}
       propertyPath: m_Name
       value: Farola (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469040236200881643, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3343,6 +3753,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 20069840}
     m_Modifications:
+    - target: {fileID: 1955376567836182393, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061365618391258710, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4777807588836228814, guid: 62fd1656e8444a2459a13341077ad572,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3393,10 +3813,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4814404116939297483, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076631480536339554, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681109514648300553, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723014549861126589, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921941724922310217, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8469040236200881643, guid: 62fd1656e8444a2459a13341077ad572,
         type: 3}
       propertyPath: m_Name
       value: Farola (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469040236200881643, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3829,6 +4279,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1435362555}
     m_Modifications:
+    - target: {fileID: 749441454240950337, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402067489772744671, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4748365900534013157, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404498602447597424, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014330688296924468, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214964054128045802, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8524051460834170795, guid: d00e009b70189e54e858e42c65f280d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3883,6 +4363,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Edificio Sobrenatural (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525857859288781939, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3960,7 +4445,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1435362555}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edificios
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4209,6 +4694,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1435362555}
     m_Modifications:
+    - target: {fileID: 749441454240950337, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402067489772744671, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4748365900534013157, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404498602447597424, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014330688296924468, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214964054128045802, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8524051460834170795, guid: d00e009b70189e54e858e42c65f280d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4264,6 +4779,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Edificio Sobrenatural (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8525857859288781939, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4283,6 +4803,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1435362555}
     m_Modifications:
+    - target: {fileID: 749441454240950337, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402067489772744671, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4748365900534013157, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404498602447597424, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014330688296924468, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214964054128045802, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8524051460834170795, guid: d00e009b70189e54e858e42c65f280d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4337,6 +4887,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Edificio Sobrenatural (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525857859288781939, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4652,6 +5207,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 20069840}
     m_Modifications:
+    - target: {fileID: 1955376567836182393, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061365618391258710, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4777807588836228814, guid: 62fd1656e8444a2459a13341077ad572,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4702,10 +5267,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4814404116939297483, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076631480536339554, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681109514648300553, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723014549861126589, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921941724922310217, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8469040236200881643, guid: 62fd1656e8444a2459a13341077ad572,
         type: 3}
       propertyPath: m_Name
       value: Farola (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469040236200881643, guid: 62fd1656e8444a2459a13341077ad572,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4893,6 +5488,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1435362555}
     m_Modifications:
+    - target: {fileID: 749441454240950337, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402067489772744671, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4748365900534013157, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404498602447597424, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014330688296924468, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214964054128045802, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8524051460834170795, guid: d00e009b70189e54e858e42c65f280d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4947,6 +5572,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Edificio Sobrenatural (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525857859288781939, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5722,6 +6352,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1435362555}
     m_Modifications:
+    - target: {fileID: 749441454240950337, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402067489772744671, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4748365900534013157, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404498602447597424, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014330688296924468, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214964054128045802, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8524051460834170795, guid: d00e009b70189e54e858e42c65f280d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5776,6 +6436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Edificio Sobrenatural
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525857859288781939, guid: d00e009b70189e54e858e42c65f280d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -5,6 +5,7 @@ using UnityEngine;
 using TMPro;
 using static UnityEditor.PlayerSettings;
 using Unity.Burst.CompilerServices;
+using System.Security.Cryptography;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class MovimientoPersonaje : MonoBehaviour
     float velocidad;
     [SerializeField] TextMeshProUGUI TextVida;
     [SerializeField] TextMeshProUGUI TextEnergia;
-    Vector3 salto = new Vector3(0, 0.8f, 0);
+    Vector3 salto = new Vector3(0, 2f, 0);
 
    
     
@@ -58,11 +59,15 @@ public class MovimientoPersonaje : MonoBehaviour
         Movimiento(h, v);
 
         //CORREGIR PROBLEMA EN EL FUTURO -  SALTO
-        //if (Input.GetKey(KeyCode.Space) && Physics.Raycast(transform.position, new Vector3(0, -0.01f, 0), LayerMask.GetMask("suelo")))
-        //{
-        //    
-        //    rb.AddForce(salto * 0.1f, ForceMode.Impulse);
-        //}
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (Physics.Raycast(transform.position, new Vector3(0, -0.1f, 0), 1, LayerMask.GetMask("suelo")))
+            {
+                Debug.Log("has saltado");
+                rb.AddForce(salto * 5, ForceMode.Impulse);
+            }
+            
+        }
 
 
 
