@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variante: tanque
   EnemySprite: {fileID: 3091123933621319135}
-  EnemyAnimator: {fileID: 0}
+  EnemyAnimator: {fileID: 3693759935881985911}
   Spawnpoints: {fileID: 0}
   Char_SO: {fileID: 11400000, guid: 347040ac8acc9244dbfb1787d3196a2c, type: 2}
   Enem_SO: {fileID: 11400000, guid: 4620338992bb039479c5e6d041e2eff8, type: 2}
@@ -257,12 +257,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8474b54aef2d4fa40a5340c861a3f34d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c8e1bad555fc554f8b34482eb8dd5d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10.5, y: 10.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -275,12 +275,12 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3091123933621319135}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: faceec6a486d95f49a9125d8c2c91e5c, type: 2}
+  m_Animation: {fileID: 7400000, guid: d7586fa0cec14c844aa32130d202361c, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: 0ff14c60763d5a24185931ecd6b89f8c, type: 2}
-  - {fileID: 7400000, guid: e2956a88ea7941d4890cd47a2f6fbf2e, type: 2}
+  - {fileID: 7400000, guid: 8442996e2f537ac489c42093e6e7b511, type: 2}
+  - {fileID: 7400000, guid: 8c9bd4eb5f96c7046a5bb1dac55b6dc9, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -293,9 +293,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3091123933621319135}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ec75e2c73e8c6384e8111ea085701835, type: 2}
+  m_Controller: {fileID: 9100000, guid: ddcc1c2ac8e1c4249a28f44184c1c210, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

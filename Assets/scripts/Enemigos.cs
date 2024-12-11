@@ -105,6 +105,13 @@ public class Enemigos : MonoBehaviour
             }
             
             rb.MovePosition(transform.position + (direccion * velocidadEnemigo * Time.deltaTime));
+
+            if (variante == "tanque")
+            {
+                EnemyAnimator.SetBool("tanque_walk", true);
+            }
+
+            rb.MovePosition(transform.position + (direccion * velocidadEnemigo * Time.deltaTime));
         }
         else
         {
@@ -112,7 +119,13 @@ public class Enemigos : MonoBehaviour
             {
                 EnemyAnimator.SetBool("caminar_corredor", false);
             }
-            
+
+            if (variante == "tanque")
+            {
+                EnemyAnimator.SetBool("tanque_walk", false);
+            }
+
+
         }
         //Vector3.Distance(Posicionjugador.position, this.transform.position) < 1
 
