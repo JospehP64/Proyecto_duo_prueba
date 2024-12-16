@@ -108,17 +108,17 @@ public class MovimientoPersonaje : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("enemigo"))
-        {
-            vida--;
-            animatorPlayer.SetTrigger("recieve damage");
-        }
-        if (vida <= 0)
-        {
-            Destroy(gameObject);
-            
-
-        }
+       //if (collision.gameObject.CompareTag("enemigo"))
+       //{
+       //    vida--;
+       //    animatorPlayer.SetTrigger("recieve damage");
+       //}
+       //if (vida <= 0)
+       //{
+       //    Destroy(gameObject);
+       //    
+       //
+       //}
         
     }
     private void OnTriggerEnter(Collider trigger)
@@ -134,7 +134,16 @@ public class MovimientoPersonaje : MonoBehaviour
         
     }
 
+    public void JugadorRecibeAtaque()
+    {
+        vida--;
+        animatorPlayer.SetTrigger("recieve damage");
+        if (vida <= 0)
+        {
+            Destroy(gameObject);
+        }
 
+    }
 
 
 }

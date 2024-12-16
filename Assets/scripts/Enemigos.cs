@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
 public class Enemigos : MonoBehaviour
 {
+    bool caminar;
+    bool atacar;
+
     [SerializeField] string variante;
     
     [SerializeField] GameObject EnemySprite;
 
     [SerializeField] Animator EnemyAnimator;
+    [SerializeField] float RadioDeAtaque = 0.75f;
+    [SerializeField] float RadioMaximoDeAtaque = 1f;
 
-    
     [SerializeField]PuntosDeSpawn Spawnpoints;
 
     [SerializeField] Personajes_SO Char_SO;
@@ -73,7 +78,14 @@ public class Enemigos : MonoBehaviour
     private void enemigo_detecta_jugador()
     {
         direccion = Posicionjugador.transform.position - transform.position;
-        Physics.SphereCast(transform.position, RadioDeAlcance, direccion, out RaycastHit EnemigoCollHit, RadioDeAlcanceMaximo);
+        if (Physics.SphereCast(transform.position, RadioDeAlcance, direccion, out RaycastHit EnemigoCollHit, RadioDeAlcanceMaximo))
+        {
+            caminar = true;
+        }
+        else
+        {
+            caminar=false;
+        }
         Debug.DrawRay(transform.position, transform.forward, Color.red);
 
 
@@ -84,6 +96,33 @@ public class Enemigos : MonoBehaviour
 
 
         movimiento = direccion;
+
+        if (variante == "corredor")
+        {
+
+            if (Physics.SphereCast(transform.position, RadioDeAtaque, direccion, out RaycastHit Attackhit, RadioMaximoDeAtaque))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
+            {
+                caminar = false;
+                if (Attackhit.transform.gameObject.CompareTag("Player"))
+                {
+
+                    EnemyAnimator.SetTrigger("ataque_corredor");
+
+                }
+            }
+            else
+            {
+
+            }
+        }
+        else if (variante == "tanque")
+        {
+
+        }
+        else if (variante == "mago")
+        {
+
+        }
     }
 
     private void FixedUpdate()
@@ -97,7 +136,7 @@ public class Enemigos : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
-        if (Physics.SphereCast(transform.position, RadioDeAlcance, direccion, out RaycastHit EnemigoCollHit, RadioDeAlcanceMaximo))
+        if (caminar == true)
         {
             if (variante == "corredor")
             {
@@ -113,7 +152,7 @@ public class Enemigos : MonoBehaviour
 
             rb.MovePosition(transform.position + (direccion * velocidadEnemigo * Time.deltaTime));
         }
-        else
+        else 
         {
             if (variante == "corredor")
             {
@@ -129,6 +168,13 @@ public class Enemigos : MonoBehaviour
         }
         //Vector3.Distance(Posicionjugador.position, this.transform.position) < 1
 
+    }
+
+    public void ataqueDeEnemigo()
+    {
+        //ANTIGUO METODO. CORREGIR
+       
+        
     }
 
     public void enemigo_Recibe_Ataque()//Cuando es llamado por "Eventos_jugador", el enemigo recibe daño
