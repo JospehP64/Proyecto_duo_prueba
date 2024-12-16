@@ -62,8 +62,8 @@ MonoBehaviour:
   variante: corredor
   EnemySprite: {fileID: 4382027934433495842}
   EnemyAnimator: {fileID: 3619775989314101742}
-  RadioDeAtaque: 0.75
-  RadioMaximoDeAtaque: 1
+  RadioDeAtaque: 0.5
+  RadioMaximoDeAtaque: 0.75
   Spawnpoints: {fileID: 0}
   Char_SO: {fileID: 11400000, guid: 347040ac8acc9244dbfb1787d3196a2c, type: 2}
   Enem_SO: {fileID: 11400000, guid: 4620338992bb039479c5e6d041e2eff8, type: 2}

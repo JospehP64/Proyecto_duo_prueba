@@ -14,8 +14,8 @@ public class Enemigos : MonoBehaviour
     [SerializeField] GameObject EnemySprite;
 
     [SerializeField] Animator EnemyAnimator;
-    [SerializeField] float RadioDeAtaque = 0.75f;
-    [SerializeField] float RadioMaximoDeAtaque = 1f;
+    public float RadioDeAtaque = 0.75f;
+    [SerializeField] public float RadioMaximoDeAtaque = 1f;
 
     [SerializeField]PuntosDeSpawn Spawnpoints;
 
@@ -102,13 +102,11 @@ public class Enemigos : MonoBehaviour
 
             if (Physics.SphereCast(transform.position, RadioDeAtaque, direccion, out RaycastHit Attackhit, RadioMaximoDeAtaque))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
             {
-                caminar = false;
-                if (Attackhit.transform.gameObject.CompareTag("Player"))
-                {
+                
+                
+                 EnemyAnimator.SetTrigger("ataque_corredor");
 
-                    EnemyAnimator.SetTrigger("ataque_corredor");
-
-                }
+                
             }
             else
             {
