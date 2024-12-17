@@ -7,14 +7,15 @@ public class EventosEnemigo : MonoBehaviour
    
     Enemigos enemigos;
 
+    GameObject Posicionjugador;
     float RangoDeAtaqueTomado = 0;
     //Enemigos enemigos;
     // Start is called before the first frame update
     private void Awake()
     {
-        RangoDeAtaqueTomado =  RangoDeAtaqueTomado + enemigos.RadioDeAtaque;
-        
-        
+        Posicionjugador = GameObject.FindGameObjectWithTag("Player");
+
+
     }
     void Start()
     {
@@ -30,12 +31,12 @@ public class EventosEnemigo : MonoBehaviour
     public void EventoAtaqueEnemigo()
     {
         AnimationEvent EnemigoAttackevent = new AnimationEvent();
-        if (Physics.SphereCast(transform.position, 0.5f, transform.right, out RaycastHit Attackhit, 1.5f))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
+        if (Physics.SphereCast(transform.position, 0.5f, Posicionjugador.transform.position, out RaycastHit Attackhit, 1.5f))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
         {
 
             if (Attackhit.transform.gameObject.CompareTag("Player"))
             {
-
+                
                 Attackhit.collider.GetComponent<MovimientoPersonaje>().JugadorRecibeAtaque();
 
             }

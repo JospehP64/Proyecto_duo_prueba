@@ -48,6 +48,7 @@ public class Enemigos : MonoBehaviour
 
        Spawnpoints = GetComponent<PuntosDeSpawn>();
         Posicionjugador = GameObject.FindGameObjectWithTag("Player");
+
         
 
         resistencia = Enem_SO.resistencia;
@@ -102,8 +103,8 @@ public class Enemigos : MonoBehaviour
 
             if (Physics.SphereCast(transform.position, RadioDeAtaque, direccion, out RaycastHit Attackhit, RadioMaximoDeAtaque))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
             {
-                
-                
+
+                caminar = false;
                  EnemyAnimator.SetTrigger("ataque_corredor");
 
                 
@@ -139,6 +140,21 @@ public class Enemigos : MonoBehaviour
             if (variante == "corredor")
             {
                 EnemyAnimator.SetBool("caminar_corredor", true);
+                if (transform.position.x > 0 || transform.position.x > 0 && transform.position.z > 0 || transform.position.x > 0 && transform.position.z < 0)
+                {
+                    
+                    EnemySprite.transform.eulerAngles = new Vector3(0, 0, 0);
+                }
+                else if (transform.position.x < 0 || transform.position.x < 0 && transform.position.z > 0 || transform.position.x < 0 && transform.position.z < 0)
+                {
+                    
+                    EnemySprite.transform.eulerAngles = new Vector3(0, -180, 0);
+                }
+                else if (transform.position.z > 0 || transform.position.z < 0)
+                {
+                    
+                }
+                
             }
             
             rb.MovePosition(transform.position + (direccion * velocidadEnemigo * Time.deltaTime));

@@ -87,7 +87,7 @@ public class PuntosDeSpawn : MonoBehaviour
             for (int spawnCount = 0; spawnCount < 4; spawnCount++)
             {
                 
-                EnemyRandomizer = Random.Range(0, 2);
+                EnemyRandomizer = Random.Range(0,2);
                 if (EnemyRandomizer <= 0)
                 {
                     
