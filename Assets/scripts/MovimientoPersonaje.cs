@@ -41,7 +41,7 @@ public class MovimientoPersonaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
 
 
         TextVida.SetText("Vida: " + vida);
@@ -49,28 +49,49 @@ public class MovimientoPersonaje : MonoBehaviour
         //
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
-        
+
         if (Input.GetMouseButtonDown(0))
         {
             animatorPlayer.SetTrigger("attack");
-            
+
         }
-        
+
         Movimiento(h, v);
 
-        //CORREGIR PROBLEMA EN EL FUTURO -  SALTO
+        Salto();
+
+    }
+
+    private void Salto()
+    {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (Physics.Raycast(transform.position, new Vector3(0, -0.1f, 0), 1, LayerMask.GetMask("suelo")))
             {
+                animatorPlayer.SetTrigger("jump");
                 Debug.Log("has saltado");
                 rb.AddForce(salto * 5, ForceMode.Impulse);
             }
-            
+            else
+            {
+                animatorPlayer.SetBool("on air", true);
+                Debug.Log("estás en el aire");
+            }
         }
-
-
-
+        else
+        {
+            if (Physics.Raycast(transform.position, new Vector3(0, -0.1f, 0), 1, LayerMask.GetMask("suelo")))
+            {
+                animatorPlayer.SetBool("on air", false);
+               
+                
+            }
+            else
+            {
+                animatorPlayer.SetBool("on air", true);
+                Debug.Log("estás en el aire");
+            }
+        }
     }
 
     private void Movimiento(float h, float v)
