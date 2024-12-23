@@ -31,7 +31,7 @@ public class EventosEnemigo : MonoBehaviour
     public void EventoAtaqueEnemigo()
     {
         AnimationEvent EnemigoAttackevent = new AnimationEvent();
-        if (Physics.SphereCast(transform.position, 0.5f, Posicionjugador.transform.position, out RaycastHit Attackhit, 1.5f))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
+        if (Physics.SphereCast(transform.position, 0.5f, transform.right, out RaycastHit Attackhit, 0.75f))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
         {
 
             if (Attackhit.transform.gameObject.CompareTag("Player"))

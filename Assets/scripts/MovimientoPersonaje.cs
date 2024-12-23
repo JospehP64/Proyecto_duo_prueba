@@ -45,7 +45,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
 
         TextVida.SetText("Vida: " + vida);
-        TextEnergia.SetText("energía: " + energia);
+        TextEnergia.SetText("energï¿½a: " + energia);
         //
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
@@ -70,17 +70,19 @@ public class MovimientoPersonaje : MonoBehaviour
             {
                 animatorPlayer.SetTrigger("jump");
                 Debug.Log("has saltado");
+                if (Input.GetKeyDown(KeyCode.Space))
                 rb.AddForce(salto * 5, ForceMode.Impulse);
             }
             else
             {
+                animatorPlayer.ResetTrigger("jump");
                 animatorPlayer.SetBool("on air", true);
-                Debug.Log("estás en el aire");
+                Debug.Log("estï¿½s en el aire");
             }
         }
         else
         {
-            if (Physics.Raycast(transform.position, new Vector3(0, -0.1f, 0), 1, LayerMask.GetMask("suelo")))
+            if (Physics.Raycast(transform.position, new Vector3(0, -0.1f, 0), 1, LayerMask.GetMask("suelo"))|| Physics.Raycast(transform.position, new Vector3(0, -0.1f, 0), 1, LayerMask.GetMask("enemigo")))
             {
                 animatorPlayer.SetBool("on air", false);
                
@@ -89,7 +91,7 @@ public class MovimientoPersonaje : MonoBehaviour
             else
             {
                 animatorPlayer.SetBool("on air", true);
-                Debug.Log("estás en el aire");
+                Debug.Log("estï¿½s en el aire");
             }
         }
     }
@@ -151,7 +153,14 @@ public class MovimientoPersonaje : MonoBehaviour
                 vida++;
                 Destroy(trigger.gameObject);
             }
+            
         }
+        if (trigger.gameObject.CompareTag("vacio")) 
+        {
+            transform.position = new Vector3(-3, 4, -5);
+
+        }
+        
         
     }
 

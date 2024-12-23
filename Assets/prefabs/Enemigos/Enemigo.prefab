@@ -69,8 +69,8 @@ MonoBehaviour:
   Enem_SO: {fileID: 11400000, guid: 4620338992bb039479c5e6d041e2eff8, type: 2}
   Drop_enemigo: {fileID: 2237634037621769332, guid: fe03aabfbb8751d44b0373cc72c9ddf0,
     type: 3}
-  velocidadEnemigo: 0.7
-  RadioDeAlcance: 0.5
+  velocidadEnemigo: 1
+  RadioDeAlcance: 0.75
   RadioDeAlcanceMaximo: 5
   resistencia: 3
 --- !u!23 &3042543268911515347
@@ -253,6 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0eb219e11c915d44bdff5d469893bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemigos: {fileID: 8466417006489366629}
 --- !u!212 &7937722107500156047
 SpriteRenderer:
   m_ObjectHideFlags: 0

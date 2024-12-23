@@ -101,7 +101,7 @@ public class Enemigos : MonoBehaviour
         if (variante == "corredor")
         {
 
-            if (Physics.SphereCast(transform.position, RadioDeAtaque, direccion, out RaycastHit Attackhit, RadioMaximoDeAtaque))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
+            if (Physics.SphereCast(transform.position, RadioDeAtaque, transform.right, out RaycastHit Attackhit, RadioMaximoDeAtaque))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
             {
 
                 caminar = false;
@@ -191,7 +191,7 @@ public class Enemigos : MonoBehaviour
         
     }
 
-    public void enemigo_Recibe_Ataque()//Cuando es llamado por "Eventos_jugador", el enemigo recibe daño
+    public void enemigo_Recibe_Ataque()//Cuando es llamado por "Eventos_jugador", el enemigo recibe daï¿½o
     {
         resistencia = resistencia - Char_SO.ataque_personajes;
         
