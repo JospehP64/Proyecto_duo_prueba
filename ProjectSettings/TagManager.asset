@@ -8,6 +8,7 @@ TagManager:
   - spawnAdmin
   - curable
   - vacio
+  - invisible_wall
   layers:
   - Default
   - TransparentFX

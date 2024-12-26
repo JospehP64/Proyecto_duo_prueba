@@ -20,7 +20,7 @@ public class MovimientoPersonaje : MonoBehaviour
     [SerializeField] TextMeshProUGUI TextVida;
     [SerializeField] TextMeshProUGUI TextEnergia;
     Vector3 salto = new Vector3(0, 2f, 0);
-
+    
    
     
     

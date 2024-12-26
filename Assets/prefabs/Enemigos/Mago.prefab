@@ -9,15 +9,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5748633577635769096}
+  - component: {fileID: 4566750766851414534}
+  - component: {fileID: 7954962080380971803}
   - component: {fileID: 5903513478482724776}
-  - component: {fileID: 8466417006489366629}
   - component: {fileID: 3042543268911515347}
   - component: {fileID: 2759842992322756320}
   - component: {fileID: 2999777425779908309}
   - component: {fileID: 2099156352409388654}
   - component: {fileID: 7524725934300917310}
   m_Layer: 0
-  m_Name: Enemigo
+  m_Name: Mago
   m_TagString: enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,15 +40,21 @@ Transform:
   - {fileID: 580950718941073627}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5903513478482724776
-MeshFilter:
+--- !u!114 &4566750766851414534
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2530477218101224787}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &8466417006489366629
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d84ce9a8b0fb894caf90e39e1e4f075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BalaASpawnear: {fileID: 2737912929795007935, guid: 783828ef3ba71cf44968914873bf0f8f,
+    type: 3}
+--- !u!114 &7954962080380971803
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,20 +66,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72d45f705cac754a96877fdac4dc3ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  variante: corredor
-  EnemySprite: {fileID: 4382027934433495842}
-  EnemyAnimator: {fileID: 3619775989314101742}
-  RadioDeAtaque: 0.3
-  RadioMaximoDeAtaque: 0.5
+  variante: 
+  EnemySprite: {fileID: 0}
+  EnemyAnimator: {fileID: 0}
+  RadioDeAtaque: 3
+  RadioMaximoDeAtaque: 5
   Spawnpoints: {fileID: 0}
   Char_SO: {fileID: 11400000, guid: 347040ac8acc9244dbfb1787d3196a2c, type: 2}
   Enem_SO: {fileID: 11400000, guid: 4620338992bb039479c5e6d041e2eff8, type: 2}
-  Drop_enemigo: {fileID: 2237634037621769332, guid: fe03aabfbb8751d44b0373cc72c9ddf0,
-    type: 3}
-  velocidadEnemigo: 1
-  RadioDeAlcance: 0.75
+  Drop_enemigo: {fileID: 0}
+  velocidadEnemigo: 0.5
+  RadioDeAlcance: 0.5
   RadioDeAlcanceMaximo: 5
-  resistencia: 3
+  resistencia: 0
+--- !u!33 &5903513478482724776
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2530477218101224787}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &3042543268911515347
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -215,10 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 580950718941073627}
-  - component: {fileID: 6857336893230375584}
   - component: {fileID: 7937722107500156047}
-  - component: {fileID: 3730154882583020316}
-  - component: {fileID: 3619775989314101742}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -241,19 +252,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5748633577635769096}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6857336893230375584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4382027934433495842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0eb219e11c915d44bdff5d469893bb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemigos: {fileID: 8466417006489366629}
 --- !u!212 &7937722107500156047
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -295,7 +293,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8474b54aef2d4fa40a5340c861a3f34d, type: 3}
+  m_Sprite: {fileID: 1303104177, guid: 9d9c0ba6faea8e247a5a0d57a493584d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -306,41 +304,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &3730154882583020316
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4382027934433495842}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: faceec6a486d95f49a9125d8c2c91e5c, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 0ff14c60763d5a24185931ecd6b89f8c, type: 2}
-  - {fileID: 7400000, guid: e2956a88ea7941d4890cd47a2f6fbf2e, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!95 &3619775989314101742
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4382027934433495842}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ec75e2c73e8c6384e8111ea085701835, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

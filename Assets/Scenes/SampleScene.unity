@@ -97,7 +97,8 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: e9948f22f83c41849bd0fd0a3e072e96,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -714,7 +715,7 @@ Transform:
   m_GameObject: {fileID: 180952012}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 4, z: -5}
+  m_LocalPosition: {x: -3, y: 3.34, z: -1.69}
   m_LocalScale: {x: 1.6099, y: 1.6099, z: 0.3331688}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1322,7 +1323,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.15704547, y: -0.00000004162387, z: 0.0000000066189694, w: 0.98759145}
-  m_LocalPosition: {x: -3, y: 8.57, z: -15}
+  m_LocalPosition: {x: -3, y: 7.91, z: -11.690001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2270,7 +2271,7 @@ Transform:
   m_GameObject: {fileID: 594608429}
   serializedVersion: 2
   m_LocalRotation: {x: 0.15704547, y: -0.00000004162387, z: 0.0000000066189694, w: 0.98759145}
-  m_LocalPosition: {x: -3, y: 8.57, z: -15}
+  m_LocalPosition: {x: -3, y: 7.91, z: -11.690001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4266,7 +4267,7 @@ GameObject:
   - component: {fileID: 1348730734}
   m_Layer: 0
   m_Name: Paredes Invisibles
-  m_TagString: Untagged
+  m_TagString: invisible_wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5765,6 +5766,126 @@ Transform:
   - {fileID: 875864103}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1868580109
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2530477218101224787, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: m_Name
+      value: Mago
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759842992322756320, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999777425779908309, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566750766851414534, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: BalaASpawnear
+      value: 
+      objectReference: {fileID: 2737912929795007935, guid: 783828ef3ba71cf44968914873bf0f8f,
+        type: 3}
+    - target: {fileID: 4566750766851414534, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: Posicionjugador
+      value: 
+      objectReference: {fileID: 180952016}
+    - target: {fileID: 4566750766851414534, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: RadioDeAtaqueAdistancia
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566750766851414534, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: RadioDeAtaqueADistanciaMaximo
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748633577635769096, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.789167
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748633577635769096, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748633577635769096, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.1594296
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748633577635769096, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748633577635769096, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748633577635769096, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748633577635769096, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748633577635769096, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748633577635769096, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748633577635769096, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954962080380971803, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: variante
+      value: mago
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954962080380971803, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: resistencia
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954962080380971803, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: Drop_enemigo
+      value: 
+      objectReference: {fileID: 2237634037621769332, guid: fe03aabfbb8751d44b0373cc72c9ddf0,
+        type: 3}
+    - target: {fileID: 7954962080380971803, guid: 88af653028ac3d04ea1c8cfac75afa9f,
+        type: 3}
+      propertyPath: BalaASpawnear
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 88af653028ac3d04ea1c8cfac75afa9f, type: 3}
 --- !u!4 &1869049918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8524051460834170795, guid: d00e009b70189e54e858e42c65f280d7,
@@ -6694,3 +6815,4 @@ SceneRoots:
   - {fileID: 78143501}
   - {fileID: 3198354789819855335}
   - {fileID: 1461349442}
+  - {fileID: 1868580109}

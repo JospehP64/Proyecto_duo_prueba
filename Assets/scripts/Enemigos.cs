@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Enemigos : MonoBehaviour
 {
+    
     bool caminar;
     bool atacar;
 
@@ -120,7 +121,19 @@ public class Enemigos : MonoBehaviour
         }
         else if (variante == "mago")
         {
+            if (Physics.SphereCast(transform.position, RadioDeAtaque, transform.right, out RaycastHit Attackhit, RadioMaximoDeAtaque))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
+            {
 
+                
+                
+               
+                
+
+            }
+            else
+            {
+
+            }
         }
     }
 
