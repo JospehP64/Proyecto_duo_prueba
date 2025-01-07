@@ -10,27 +10,48 @@ public class EventoMago : MonoBehaviour
     [SerializeField]Transform Posicionjugador;
     Vector3 direccion;
     [SerializeField]GameObject BalaASpawnear;
+    
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(InvocarBalas());
-        direccion = Posicionjugador.transform.position - transform.position;
+
+        DispararDentroDeAlcance();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-                
+        //DispararDentroDeAlcance();
+
     }
-    IEnumerator InvocarBalas() 
+
+    private void DispararDentroDeAlcance()
     {
-        if (Physics.SphereCast(transform.position, RadioDeAtaqueAdistancia, transform.right, out RaycastHit Attackhit, RadioDeAtaqueADistanciaMaximo)) 
+        if (Physics.SphereCast(transform.position, RadioDeAtaqueAdistancia, transform.right, out RaycastHit Attackhit, RadioDeAtaqueADistanciaMaximo))
         {
+            StartCoroutine(InvocarBalas());
+            direccion = Posicionjugador.transform.position - transform.position;
+            
+            
 
         }
-        Instantiate(BalaASpawnear, transform.position, quaternion.identity);
-        yield return new WaitForSeconds(10);
+        else
+        {
+            StopCoroutine(InvocarBalas());
+        }
+    }
+
+    IEnumerator InvocarBalas() 
+    {
+        while (Physics.SphereCast(transform.position, RadioDeAtaqueAdistancia, transform.right, out RaycastHit Attackhit, RadioDeAtaqueADistanciaMaximo))
+        {
+            yield return new WaitForSeconds(1);
+            Instantiate(BalaASpawnear, transform.position, quaternion.identity);
+            yield return new WaitForSeconds(3);
+        }
+        
+        
+
     }
 }

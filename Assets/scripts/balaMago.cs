@@ -10,7 +10,7 @@ public class balaMago : MonoBehaviour
  [SerializeField]float VelocidadDeBalasDeMago;// velocidad de esta bala   
   GameObject PlayerTargetPosition;
  Vector3 direccionBala;
- [SerializeField]float tiempodeBala;//variable para el tiempo de vida de la bala
+  float tiempodeBala = 0;//variable para el tiempo de vida de la bala
 
 
     // Start is called before the first frame update
@@ -31,34 +31,31 @@ public class balaMago : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     MovimientoDeBala();
-
+        
+        MovimientoDeBala();
+       
+        
     }
 
     void MovimientoDeBala()
     {
         rb.MovePosition(transform.position + (direccionBala * VelocidadDeBalasDeMago * Time.deltaTime));
-        for (float TV = 0; TV < 20; TV++) 
-        {
-            if (TV >= 20) 
-            {
-                Destroy(gameObject);
-            }
-        }
+        
     }
      private void OnTriggerEnter(Collider collide) 
      {
-        if (collide.gameObject.CompareTag("invisible_wall")) 
-        {
-            
-            Destroy(gameObject);
-
-        }
+        
         if (collide.gameObject.CompareTag("Player")) 
         {
             collide.GetComponent<MovimientoPersonaje>().JugadorRecibeAtaque();
             Destroy(gameObject);
         }
-     }
+        else if (collide.gameObject.CompareTag("invisible_wall"))
+        {
+
+            Destroy(gameObject);
+
+        }
+    }
 }
 
