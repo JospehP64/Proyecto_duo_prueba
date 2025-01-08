@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6593727728391020645}
   m_Layer: 0
   m_Name: BalaDeMago
-  m_TagString: Untagged
+  m_TagString: bala
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +51,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Balas_SO: {fileID: 11400000, guid: 3bd4698d058cacf4c80b9bd5fc3d89c3, type: 2}
   VelocidadDeBalasDeMago: 3
-  tiempodeBala: 0
 --- !u!33 &928711699249736835
 MeshFilter:
   m_ObjectHideFlags: 0

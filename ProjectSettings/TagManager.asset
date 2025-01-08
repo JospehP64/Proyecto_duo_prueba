@@ -9,6 +9,8 @@ TagManager:
   - curable
   - vacio
   - invisible_wall
+  - coche
+  - bala
   layers:
   - Default
   - TransparentFX

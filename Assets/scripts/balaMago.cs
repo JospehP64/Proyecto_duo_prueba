@@ -45,15 +45,15 @@ public class balaMago : MonoBehaviour
      private void OnTriggerEnter(Collider collide) 
      {
         
-        if (collide.gameObject.CompareTag("Player")) 
+        if (collide.gameObject.CompareTag("Player") && gameObject.CompareTag("bala")) 
         {
             collide.GetComponent<MovimientoPersonaje>().JugadorRecibeAtaque();
             Destroy(gameObject);
         }
-        else if (collide.gameObject.CompareTag("invisible_wall"))
+        else if (collide.gameObject.CompareTag("Player") && (gameObject.CompareTag("coche")))
         {
+            collide.GetComponent<MovimientoPersonaje>().JugadorRecibeAtaque();
 
-            Destroy(gameObject);
 
         }
     }
