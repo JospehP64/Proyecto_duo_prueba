@@ -13,8 +13,13 @@ public class PuntosDeSpawn : MonoBehaviour
     [SerializeField] TextMeshProUGUI TextoRondas;
     int rondas = 0;
     [SerializeField] Transform[] PuntosDeSpawneo;
+    [SerializeField] Transform[] PuntosDeObstaculo;
     [SerializeField] GameObject[] MonstruosASpawnear;
-    
+    [SerializeField] GameObject[] ObstaculosASpawnear;
+    float TiempoDeEsperaAObstaculos = 0;
+
+    int ObstacleRandomizer, ObstacleLocation;//La posibilidad de que se genere un coche de un tipo y de que se invoque en un generador o "spawner" aleatorio
+
     int EnemyRandomizer;//Para la posibilidad de que un enemigo aleatorio se genere dentro de cada ronda del juego
     
     int SpawnerRandomizer;//Para calcular en dónde se generará el nuevo enemigo
@@ -45,6 +50,22 @@ public class PuntosDeSpawn : MonoBehaviour
         Debug.Log("RondasEnejecución: " + enEjecucion);
         ContarEnemigos();
 
+        ContarObstaculo();
+
+    }
+
+    private void ContarObstaculo()
+    {
+        if (TiempoDeEsperaAObstaculos >= 5)
+        {
+            StartCoroutine(InvocarObstaculos());
+            TiempoDeEsperaAObstaculos = 0;
+        }
+        else
+        {
+            StopCoroutine(InvocarObstaculos());
+            TiempoDeEsperaAObstaculos += 1 * Time.deltaTime;
+        }
     }
 
     private void ContarEnemigos()
@@ -65,13 +86,14 @@ public class PuntosDeSpawn : MonoBehaviour
         {
             rondas = 0;
         }
-
+        
         
     }
 
 
     IEnumerator InvocarEnemigos()
     {
+       
 
         if (totalDeEnemigos <= 0 && !enEjecucion)
         {
@@ -233,5 +255,16 @@ public class PuntosDeSpawn : MonoBehaviour
         }
         
         
+    }
+    IEnumerator InvocarObstaculos()
+    {
+        yield return new WaitForSeconds(5);
+        for (int CARTIME = 0; CARTIME < 6; CARTIME++)
+        {
+            ObstacleRandomizer = Random.Range(0, 5);
+            ObstacleLocation = Random.Range(0, 7);//Punto aleatorio donde se generará el obstáculo
+            Instantiate(ObstaculosASpawnear[ObstacleRandomizer], PuntosDeObstaculo[ObstacleLocation].position, Quaternion.identity);
+            yield return new WaitForSeconds(5);
+        }
     }
 }

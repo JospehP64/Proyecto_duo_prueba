@@ -14,9 +14,7 @@ public class EventoMago : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        DispararDentroDeAlcance();
-
+        StartCoroutine(DispararDentroDeAlcance());
     }
 
     // Update is called once per frame
@@ -26,32 +24,52 @@ public class EventoMago : MonoBehaviour
 
     }
 
-    private void DispararDentroDeAlcance()
+    private IEnumerator DispararDentroDeAlcance()
     {
-        if (Physics.SphereCast(transform.position, RadioDeAtaqueAdistancia, transform.right, out RaycastHit Attackhit, RadioDeAtaqueADistanciaMaximo))
+        while(true)
         {
-            StartCoroutine(InvocarBalas());
-            direccion = Posicionjugador.transform.position - transform.position;
             
-            
+                Instantiate(BalaASpawnear, transform.position, quaternion.identity);
+                yield return new WaitForSeconds(1);
 
+
+            //if (Physics.SphereCast(transform.position, RadioDeAtaqueAdistancia, direccion, out RaycastHit Attackhit, RadioDeAtaqueADistanciaMaximo))
+            //{
+            //    StartCoroutine(InvocarBalas());
+            //    direccion = Posicionjugador.transform.position - transform.position;
+
+
+
+            //}
         }
-        else
+   
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Player"))
         {
-            StopCoroutine(InvocarBalas());
+            StartCoroutine(DispararDentroDeAlcance());
         }
     }
 
-    IEnumerator InvocarBalas() 
+    private void OnTriggerExit(Collider other)
     {
-        while (Physics.SphereCast(transform.position, RadioDeAtaqueAdistancia, transform.right, out RaycastHit Attackhit, RadioDeAtaqueADistanciaMaximo))
+        if (other.gameObject.CompareTag("Player"))
         {
-            yield return new WaitForSeconds(1);
-            Instantiate(BalaASpawnear, transform.position, quaternion.identity);
-            yield return new WaitForSeconds(3);
+            StopAllCoroutines();
         }
-        
-        
-
     }
+    //IEnumerator InvocarBalas() 
+    //{
+    //    while (Physics.SphereCast(transform.position, RadioDeAtaqueAdistancia, direccion, out RaycastHit Attackhit, RadioDeAtaqueADistanciaMaximo))
+    //    {
+    //        yield return new WaitForSeconds(1);
+    //        yield return new WaitForSeconds(3);
+    //    }
+
+
+
+    //}
 }
