@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Balas_SO: {fileID: 11400000, guid: 3bd4698d058cacf4c80b9bd5fc3d89c3, type: 2}
-  VelocidadDeBalasDeMago: 3
+  VelocidadDeBalasDeMago: 5
 --- !u!33 &928711699249736835
 MeshFilter:
   m_ObjectHideFlags: 0
