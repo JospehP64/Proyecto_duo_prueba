@@ -206,6 +206,7 @@ public class Enemigos : MonoBehaviour
 
     public void enemigo_Recibe_Ataque()//Cuando es llamado por "Eventos_jugador", el enemigo recibe da�o
     {
+        EnemyAnimator.SetTrigger("recibir_ataque_corredor");
         resistencia = resistencia - Char_SO.ataque_personajes;
         
     }
