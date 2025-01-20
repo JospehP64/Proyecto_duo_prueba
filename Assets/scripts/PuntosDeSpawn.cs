@@ -109,30 +109,30 @@ public class PuntosDeSpawn : MonoBehaviour
             for (int spawnCount = 0; spawnCount < 4; spawnCount++)
             {
                 
-                EnemyRandomizer = Random.Range(0, 3);
+                EnemyRandomizer = Random.Range(0, 4);
                 SpawnerRandomizer = Random.Range(0, 5);
-                if (EnemyRandomizer <= 0)
+                if (EnemyRandomizer <= 1)
                 {
                     
                     
 
-                    Instantiate(MonstruosASpawnear[EnemyRandomizer], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
-                    totalDeEnemigos += 1;
-                    yield return new WaitForSeconds(1);
-                }
-                else if (EnemyRandomizer >= 1)
-                {
-                    
-                    
-                    Instantiate(MonstruosASpawnear[EnemyRandomizer], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
+                    Instantiate(MonstruosASpawnear[0], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
                     totalDeEnemigos += 1;
                     yield return new WaitForSeconds(1);
                 }
                 else if (EnemyRandomizer >= 2)
                 {
                     
+                    
+                    Instantiate(MonstruosASpawnear[1], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
+                    totalDeEnemigos += 1;
+                    yield return new WaitForSeconds(1);
+                }
+                else if (EnemyRandomizer >= 3)
+                {
+                    
 
-                    Instantiate(MonstruosASpawnear[EnemyRandomizer], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
+                    Instantiate(MonstruosASpawnear[2], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
                     totalDeEnemigos += 1;
                     yield return new WaitForSeconds(1);
                 }
