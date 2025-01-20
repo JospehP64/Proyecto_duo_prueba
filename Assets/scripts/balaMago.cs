@@ -40,6 +40,7 @@ public class balaMago : MonoBehaviour
     void MovimientoDeBala()
     {
         rb.MovePosition(transform.position + (direccionBala * VelocidadDeBalasDeMago * Time.deltaTime));
+        Destroy(gameObject, 5);
         
     }
      private void OnTriggerEnter(Collider collide) 

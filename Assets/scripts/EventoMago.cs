@@ -30,7 +30,7 @@ public class EventoMago : MonoBehaviour
         {
             
                 Instantiate(BalaASpawnear, transform.position, quaternion.identity);
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(3);
 
 
             //if (Physics.SphereCast(transform.position, RadioDeAtaqueAdistancia, direccion, out RaycastHit Attackhit, RadioDeAtaqueADistanciaMaximo))

@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1716033350469218692}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.95, y: 1.17, z: -0.13}
+  m_LocalPosition: {x: 1.95, y: 1.17, z: -1.014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,8 +45,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.11347453, g: 0.9622642, b: 0.8932861, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Intensity: 7.53
+  m_Range: 2.42
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -88,8 +88,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
+  m_ColorTemperature: 7093
+  m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -775,7 +775,7 @@ Transform:
   m_GameObject: {fileID: 7918351631542335276}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.81, y: 1.17, z: 0.23}
+  m_LocalPosition: {x: 4.81, y: 1.17, z: -0.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -793,8 +793,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.11347453, g: 0.9622642, b: 0.8932861, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Intensity: 13.52
+  m_Range: 1.78
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -837,7 +837,7 @@ Light:
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
+  m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -1039,7 +1039,7 @@ Transform:
   m_GameObject: {fileID: 8994704307518072732}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.34, y: 1.17, z: 0.23}
+  m_LocalPosition: {x: -0.34, y: 1.17, z: -0.261}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1057,8 +1057,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.11347453, g: 0.9622642, b: 0.8932861, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Intensity: 9.74
+  m_Range: 2.08
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1101,7 +1101,7 @@ Light:
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
+  m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1

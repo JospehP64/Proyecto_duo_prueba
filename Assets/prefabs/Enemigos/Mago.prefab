@@ -69,19 +69,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72d45f705cac754a96877fdac4dc3ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  variante: 
-  EnemySprite: {fileID: 0}
-  EnemyAnimator: {fileID: 0}
+  variante: mago
+  EnemySprite: {fileID: 4382027934433495842}
+  EnemyAnimator: {fileID: 6937978487711311420}
   RadioDeAtaque: 3
   RadioMaximoDeAtaque: 5
   Spawnpoints: {fileID: 0}
   Char_SO: {fileID: 11400000, guid: 347040ac8acc9244dbfb1787d3196a2c, type: 2}
   Enem_SO: {fileID: 11400000, guid: 4620338992bb039479c5e6d041e2eff8, type: 2}
-  Drop_enemigo: {fileID: 0}
+  Drop_enemigo: {fileID: 2237634037621769332, guid: fe03aabfbb8751d44b0373cc72c9ddf0,
+    type: 3}
   velocidadEnemigo: 0.5
   RadioDeAlcance: 0.5
   RadioDeAlcanceMaximo: 5
-  resistencia: 0
+  resistencia: 3
 --- !u!33 &5903513478482724776
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -232,7 +233,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 580950718941073627}
+  - component: {fileID: 1668997029238290008}
   - component: {fileID: 7937722107500156047}
+  - component: {fileID: 4262018206282536238}
+  - component: {fileID: 6937978487711311420}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -255,6 +259,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5748633577635769096}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1668997029238290008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4382027934433495842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0eb219e11c915d44bdff5d469893bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &7937722107500156047
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -307,3 +323,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!111 &4262018206282536238
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4382027934433495842}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &6937978487711311420
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4382027934433495842}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
