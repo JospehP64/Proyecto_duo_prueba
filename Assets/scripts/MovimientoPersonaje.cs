@@ -64,33 +64,27 @@ public class MovimientoPersonaje : MonoBehaviour
 
     private void Salto()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && Physics.Raycast(transform.position, new Vector3(0, -0.1f, 0), 1, LayerMask.GetMask("suelo")))
         {
-            if (Physics.Raycast(transform.position, new Vector3(0, -0.1f, 0), 1, LayerMask.GetMask("suelo")))
-            {
-                animatorPlayer.SetTrigger("jump");
-                Debug.Log("has saltado");
-                if (Input.GetKeyDown(KeyCode.Space))
+            
+            
                 rb.AddForce(salto * 5, ForceMode.Impulse);
-            }
-            else
-            {
-                animatorPlayer.ResetTrigger("jump");
-                animatorPlayer.SetBool("on air", true);
-                Debug.Log("est�s en el aire");
-            }
+            animatorPlayer.SetBool("jump", true);
+            Debug.Log("has saltado");
+
         }
         else
         {
             if (Physics.Raycast(transform.position, new Vector3(0, -0.1f, 0), 1, LayerMask.GetMask("suelo"))|| Physics.Raycast(transform.position, new Vector3(0, -0.1f, 0), 1, LayerMask.GetMask("enemigo")))
             {
                 animatorPlayer.SetBool("on air", false);
-               
-                
+                animatorPlayer.SetBool("jump", false);
+
             }
             else
             {
                 animatorPlayer.SetBool("on air", true);
+                animatorPlayer.SetBool("jump", false);
                 Debug.Log("est�s en el aire");
             }
         }

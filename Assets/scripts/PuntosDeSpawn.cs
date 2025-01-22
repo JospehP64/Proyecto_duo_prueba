@@ -20,9 +20,9 @@ public class PuntosDeSpawn : MonoBehaviour
 
     int ObstacleRandomizer, ObstacleLocation;//La posibilidad de que se genere un coche de un tipo y de que se invoque en un generador o "spawner" aleatorio
 
-    int EnemyRandomizer;//Para la posibilidad de que un enemigo aleatorio se genere dentro de cada ronda del juego
+    int EnemyRandomizer = Random.Range(0, 4);//Para la posibilidad de que un enemigo aleatorio se genere dentro de cada ronda del juego
     
-    int SpawnerRandomizer;//Para calcular en dónde se generará el nuevo enemigo
+    int SpawnerRandomizer = Random.Range(0, 4);//Para calcular en dónde se generará el nuevo enemigo
 
     public static int totalDeEnemigos; //URGENTE
 
@@ -77,12 +77,12 @@ public class PuntosDeSpawn : MonoBehaviour
             StartCoroutine(InvocarEnemigos());
 
         }
-        if (rondas == 3 && enEjecucion && totalDeEnemigos <= 0)
+        if (rondas == 5 && enEjecucion && totalDeEnemigos <= 0)//Reinicia la cuenta Si sobre pasa el numero de rondas establecido
         {
             enEjecucion = false;
 
         }
-        if (rondas > 4)
+        if (rondas > 4)//Reinicia la cuenta Si sobre pasa el numero de rondas establecido
         {
             rondas = 0;
         }
@@ -103,6 +103,7 @@ public class PuntosDeSpawn : MonoBehaviour
         rondas += 1;
         if (rondas == 1)
         {
+            
             totalDeEnemigos = 0;
             yield return new WaitForSeconds(1);
 
@@ -110,7 +111,7 @@ public class PuntosDeSpawn : MonoBehaviour
             {
                 
                 EnemyRandomizer = Random.Range(0, 4);
-                SpawnerRandomizer = Random.Range(0, 5);
+                SpawnerRandomizer = Random.Range(0, 4); //0, 1, 2, 3
                 if (EnemyRandomizer <= 1)
                 {
                     
@@ -146,31 +147,30 @@ public class PuntosDeSpawn : MonoBehaviour
 
             for (int spawnCount = 0; spawnCount < 4; spawnCount++)
             {
-
-                EnemyRandomizer = Random.Range(0, 3);
-                SpawnerRandomizer = Random.Range(0, 5);
-                if (EnemyRandomizer <= 0)
+                EnemyRandomizer = Random.Range(0, 4);
+                SpawnerRandomizer = Random.Range(0, 4); //0, 1, 2, 3
+                if (EnemyRandomizer <= 1)
                 {
-
+                    
                     
 
                     Instantiate(MonstruosASpawnear[0], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
                     totalDeEnemigos += 1;
                     yield return new WaitForSeconds(1);
                 }
-                else if (EnemyRandomizer >= 1)
+                else if (EnemyRandomizer >= 2)
                 {
-
+                    
                     
                     Instantiate(MonstruosASpawnear[1], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
                     totalDeEnemigos += 1;
                     yield return new WaitForSeconds(1);
                 }
-                else
+                else if (EnemyRandomizer >= 3)
                 {
                     
 
-                    Instantiate(MonstruosASpawnear[0], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
+                    Instantiate(MonstruosASpawnear[2], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
                     totalDeEnemigos += 1;
                     yield return new WaitForSeconds(1);
                 }
@@ -186,30 +186,30 @@ public class PuntosDeSpawn : MonoBehaviour
             for (int spawnCount = 0; spawnCount < 4; spawnCount++)
             {
 
-                EnemyRandomizer = Random.Range(0, 3);
-                SpawnerRandomizer = Random.Range(0, 5);
-                if (EnemyRandomizer <= 0)
+                EnemyRandomizer = Random.Range(0, 4);
+                SpawnerRandomizer = Random.Range(0, 4); //0, 1, 2, 3
+                if (EnemyRandomizer <= 1)
                 {
 
-                    
+
 
                     Instantiate(MonstruosASpawnear[0], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
                     totalDeEnemigos += 1;
                     yield return new WaitForSeconds(1);
                 }
-                else if (EnemyRandomizer >= 1)
+                else if (EnemyRandomizer >= 2)
                 {
 
-                    
+
                     Instantiate(MonstruosASpawnear[1], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
                     totalDeEnemigos += 1;
                     yield return new WaitForSeconds(1);
                 }
-                else
+                else if (EnemyRandomizer >= 3)
                 {
-                    
 
-                    Instantiate(MonstruosASpawnear[0], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
+
+                    Instantiate(MonstruosASpawnear[2], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
                     totalDeEnemigos += 1;
                     yield return new WaitForSeconds(1);
                 }
@@ -223,8 +223,8 @@ public class PuntosDeSpawn : MonoBehaviour
             for (int spawnCount = 0; spawnCount < 4; spawnCount++)
             {
 
-                EnemyRandomizer = Random.Range(0, 3);
-                SpawnerRandomizer = Random.Range(0, 5);
+                EnemyRandomizer = Random.Range(0, 4);
+                SpawnerRandomizer = Random.Range(0, 4); //0, 1, 2, 3
                 if (EnemyRandomizer <= 0)
                 {
 
