@@ -876,6 +876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e753a9c42db1da5479ac9f346a939d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerIsDefeated: 0
   sprite_personaje: {fileID: 1988486639}
   valor_personajes: {fileID: 11400000, guid: 347040ac8acc9244dbfb1787d3196a2c, type: 2}
   animatorPlayer: {fileID: 1988486643}
@@ -4210,7 +4211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1011053995
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5043,7 +5044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1205442372
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5462,14 +5463,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624600397489049511, guid: 65f66d377ac3732429d91aa5ae2c0df2,
+      - m_Target: {fileID: 9010738324288844018, guid: 65f66d377ac3732429d91aa5ae2c0df2,
           type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+        m_TargetAssemblyTypeName: GameTitleManager, Assembly-CSharp
+        m_MethodName: ComenzarPartidaNueva
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5935,6 +5936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 341979627c4edb4449d6d6664048547f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanvasGameOver: {fileID: 1011053998}
   CanvasPausa: {fileID: 2014728516}
 --- !u!1001 &1476216126
 PrefabInstance:

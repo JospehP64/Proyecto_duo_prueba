@@ -34,6 +34,7 @@ public class EVENTOSJUEGO : MonoBehaviour
     private void Update()
     {
         PausarJuego();
+        PantallaDeGameOver();
     }
 
     // Update is called once per frame
