@@ -9,7 +9,7 @@ using System.Security.Cryptography;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
-    
+    public bool PlayerIsDefeated = false;
     [SerializeField]GameObject sprite_personaje;
     Enemigos enemy;
    [SerializeField] Personajes_SO valor_personajes;
@@ -29,8 +29,13 @@ public class MovimientoPersonaje : MonoBehaviour
     Rigidbody rb;
 
     // Start is called before the first frame update
+    private void OnDestroy()
+    {
+        PlayerIsDefeated = true;
+    }
     void Start()
     {
+        PlayerIsDefeated = false;
         sprite_personaje.transform.eulerAngles = new Vector3(0, 180, 0);
         vida = valor_personajes.vida_personajes;
         energia =  valor_personajes.energia_personajes;
