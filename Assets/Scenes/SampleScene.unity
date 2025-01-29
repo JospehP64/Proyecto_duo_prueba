@@ -4211,7 +4211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1011053995
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5938,6 +5938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanvasGameOver: {fileID: 1011053998}
   CanvasPausa: {fileID: 2014728516}
+  PlayerScript: {fileID: 180952018}
 --- !u!1001 &1476216126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6422,9 +6423,9 @@ MonoBehaviour:
   - {fileID: 304971936}
   - {fileID: 2027416620}
   MonstruosASpawnear:
+  - {fileID: 2530477218101224787, guid: 88af653028ac3d04ea1c8cfac75afa9f, type: 3}
   - {fileID: 2530477218101224787, guid: e66d47f2a40f0dc45a22f014e36110b3, type: 3}
   - {fileID: 2530477218101224787, guid: ac0dd9ac93c859142a42bd48898832ee, type: 3}
-  - {fileID: 2530477218101224787, guid: 88af653028ac3d04ea1c8cfac75afa9f, type: 3}
   ObstaculosASpawnear:
   - {fileID: 6814483020168534931, guid: 3207f4b990ff5054d9c046a1dc541de9, type: 3}
   - {fileID: 6814483020168534931, guid: 675490526c02dd64d8037ec5cb313933, type: 3}
@@ -8012,7 +8013,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2014728513
 RectTransform:
   m_ObjectHideFlags: 0

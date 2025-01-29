@@ -7,12 +7,18 @@ public class EVENTOSJUEGO : MonoBehaviour
     public static EVENTOSJUEGO EventosDeJuego;
     [SerializeField] Canvas CanvasGameOver;
     [SerializeField] Canvas CanvasPausa;
-
-    MovimientoPersonaje PlayerScript;
+    [SerializeField]PuntosDeSpawn Spawnpoints;
+    [SerializeField]MovimientoPersonaje PlayerScript;
+    int vidaJugador;
      bool JuegoEnPausa = false;
+    bool JugadorDerrotado;
+    
     // Start is called before the first frame update
     private void Awake()
     {
+        
+        
+        
         if (EventosDeJuego == null)
         {
             EventosDeJuego = this;
@@ -27,6 +33,11 @@ public class EVENTOSJUEGO : MonoBehaviour
     }
     void Start()
     {
+        
+        JugadorDerrotado = PlayerScript.PlayerIsDefeated;
+
+        vidaJugador = PlayerScript.vida;
+
         CanvasPausa.enabled = false;
         CanvasGameOver.enabled = false;
         
@@ -40,14 +51,14 @@ public class EVENTOSJUEGO : MonoBehaviour
     // Update is called once per frame
     void PausarJuego()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && JuegoEnPausa == false && PlayerScript.vida > 0)
+        if (Input.GetKeyDown(KeyCode.Escape) && JuegoEnPausa == false && vidaJugador > 0)
         {
             CanvasPausa.enabled = true;
             JuegoEnPausa = true;
             Time.timeScale = 0;
             
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && JuegoEnPausa == true && PlayerScript.vida > 0)
+        else if (Input.GetKeyDown(KeyCode.Escape) && JuegoEnPausa == true && vidaJugador > 0)
         {
             CanvasPausa.enabled = false;
             Time.timeScale = 1;
@@ -58,14 +69,14 @@ public class EVENTOSJUEGO : MonoBehaviour
     }
     public void BotonPausarJuego()
     {
-        if (JuegoEnPausa == false && PlayerScript.vida > 0)
+        if (JuegoEnPausa == false && vidaJugador > 0)
         {
             CanvasPausa.enabled = true;
             JuegoEnPausa = true;
             Time.timeScale = 0;
 
         }
-        else if ( JuegoEnPausa == true && PlayerScript.vida > 0)
+        else if ( JuegoEnPausa == true && vidaJugador > 0)
         {
             CanvasPausa.enabled = false;
             Time.timeScale = 1;
@@ -80,7 +91,7 @@ public class EVENTOSJUEGO : MonoBehaviour
         {
             CanvasGameOver.enabled = true;
             CanvasPausa.enabled = false;
-
+            Spawnpoints.rondas = 1;
         }
     }
 

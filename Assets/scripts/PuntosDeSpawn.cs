@@ -11,7 +11,7 @@ public class PuntosDeSpawn : MonoBehaviour
     
 
     [SerializeField] TextMeshProUGUI TextoRondas;
-    int rondas = 0;
+    public int rondas = 0;
     [SerializeField] Transform[] PuntosDeSpawneo;
     [SerializeField] Transform[] PuntosDeObstaculo;
     [SerializeField] GameObject[] MonstruosASpawnear;
@@ -20,14 +20,21 @@ public class PuntosDeSpawn : MonoBehaviour
 
     int ObstacleRandomizer, ObstacleLocation;//La posibilidad de que se genere un coche de un tipo y de que se invoque en un generador o "spawner" aleatorio
 
-    int EnemyRandomizer = Random.Range(0, 4);//Para la posibilidad de que un enemigo aleatorio se genere dentro de cada ronda del juego
-    
-    int SpawnerRandomizer = Random.Range(0, 4);//Para calcular en dónde se generará el nuevo enemigo
+    int EnemyRandomizer;
+
+    int SpawnerRandomizer;
 
     public static int totalDeEnemigos; //URGENTE
 
     private bool enEjecucion = false;
-    
+
+    private void Awake()
+    {
+        EnemyRandomizer = Random.Range(0, 4);
+
+        SpawnerRandomizer = Random.Range(0, 4);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -121,7 +128,7 @@ public class PuntosDeSpawn : MonoBehaviour
                     totalDeEnemigos += 1;
                     yield return new WaitForSeconds(1);
                 }
-                else if (EnemyRandomizer >= 2)
+                else if (EnemyRandomizer == 2 && EnemyRandomizer < 3)
                 {
                     
                     
@@ -158,7 +165,7 @@ public class PuntosDeSpawn : MonoBehaviour
                     totalDeEnemigos += 1;
                     yield return new WaitForSeconds(1);
                 }
-                else if (EnemyRandomizer >= 2)
+                else if (EnemyRandomizer == 2 && EnemyRandomizer < 3)
                 {
                     
                     
@@ -197,7 +204,7 @@ public class PuntosDeSpawn : MonoBehaviour
                     totalDeEnemigos += 1;
                     yield return new WaitForSeconds(1);
                 }
-                else if (EnemyRandomizer >= 2)
+                else if (EnemyRandomizer == 2  && EnemyRandomizer < 3)
                 {
 
 
@@ -222,31 +229,31 @@ public class PuntosDeSpawn : MonoBehaviour
 
             for (int spawnCount = 0; spawnCount < 4; spawnCount++)
             {
-
+                
                 EnemyRandomizer = Random.Range(0, 4);
                 SpawnerRandomizer = Random.Range(0, 4); //0, 1, 2, 3
-                if (EnemyRandomizer <= 0)
+                if (EnemyRandomizer <= 1)
                 {
-
+                    
                     
 
                     Instantiate(MonstruosASpawnear[0], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
                     totalDeEnemigos += 1;
                     yield return new WaitForSeconds(1);
                 }
-                else if (EnemyRandomizer >= 1)
+                else if (EnemyRandomizer == 2 && EnemyRandomizer < 3)
                 {
-
+                    
                     
                     Instantiate(MonstruosASpawnear[1], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
                     totalDeEnemigos += 1;
                     yield return new WaitForSeconds(1);
                 }
-                else
+                else if(EnemyRandomizer >= 3)
                 {
                     
 
-                    Instantiate(MonstruosASpawnear[0], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
+                    Instantiate(MonstruosASpawnear[2], PuntosDeSpawneo[SpawnerRandomizer].position, Quaternion.identity);//RECUERDA: .POSITION AL LADO DE LOS PUNTOS DEL SPAWNEO. QUATERNION.IDENTITY PARA FIJAR LA ROTACIÓN DETERMINADA DEL OBJETO.
                     totalDeEnemigos += 1;
                     yield return new WaitForSeconds(1);
                 }

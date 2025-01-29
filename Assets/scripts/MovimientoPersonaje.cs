@@ -9,7 +9,7 @@ using System.Security.Cryptography;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
-    public bool PlayerIsDefeated = false;
+    public bool PlayerIsDefeated;
     [SerializeField]GameObject sprite_personaje;
     Enemigos enemy;
    [SerializeField] Personajes_SO valor_personajes;
@@ -29,10 +29,7 @@ public class MovimientoPersonaje : MonoBehaviour
     Rigidbody rb;
 
     // Start is called before the first frame update
-    private void OnDestroy()
-    {
-        PlayerIsDefeated = true;
-    }
+    
     void Start()
     {
         PlayerIsDefeated = false;
@@ -169,6 +166,7 @@ public class MovimientoPersonaje : MonoBehaviour
         animatorPlayer.SetTrigger("recieve damage");
         if (vida <= 0)
         {
+            PlayerIsDefeated = true;
             Destroy(gameObject);
         }
 
