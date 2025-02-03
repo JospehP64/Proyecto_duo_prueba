@@ -10,21 +10,7 @@ public class GameTitleManager : MonoBehaviour
     public static GameTitleManager GameManager;
  
     // Start is called before the first frame update
-    private void Awake()
-    {
-
-        if (GameManager == null)
-        {
-            GameManager = this;
-            DontDestroyOnLoad(GameManager);
-        }
-        else
-        {
-            Destroy(gameObject);
-            
-        }
-        
-    }
+    
 
     // Update is called once per frame
     public void ComenzarPartidaNueva()
