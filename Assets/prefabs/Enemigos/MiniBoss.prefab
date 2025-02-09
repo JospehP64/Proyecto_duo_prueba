@@ -61,7 +61,7 @@ MonoBehaviour:
   variante: tanque
   EnemySprite: {fileID: 3091123933621319135}
   EnemyAnimator: {fileID: 3693759935881985911}
-  RadioDeAtaque: 0.75
+  RadioDeAtaque: 3.15
   RadioMaximoDeAtaque: 1
   Spawnpoints: {fileID: 0}
   Char_SO: {fileID: 11400000, guid: 347040ac8acc9244dbfb1787d3196a2c, type: 2}
@@ -193,6 +193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6974916441647948897}
+  - component: {fileID: 5590950677495051348}
   - component: {fileID: 1086368756130257040}
   - component: {fileID: 270859306309985071}
   - component: {fileID: 3693759935881985911}
@@ -218,6 +219,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5748633577635769096}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.571}
+--- !u!114 &5590950677495051348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3091123933621319135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9c9833f6f106214faa84dd352bf2e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &1086368756130257040
 SpriteRenderer:
   m_ObjectHideFlags: 0

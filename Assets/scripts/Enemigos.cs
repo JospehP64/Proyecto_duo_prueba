@@ -117,7 +117,18 @@ public class Enemigos : MonoBehaviour
         }
         else if (variante == "tanque")
         {
+            if (Physics.SphereCast(transform.position, RadioDeAtaque, transform.right, out RaycastHit Attackhit, RadioMaximoDeAtaque))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
+            {
 
+                caminar = false;
+                EnemyAnimator.SetTrigger("tanque_attack");
+
+
+            }
+            else
+            {
+
+            }
         }
         else if (variante == "mago")
         {
