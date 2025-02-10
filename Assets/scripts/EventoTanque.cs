@@ -6,7 +6,7 @@ public class EventoTanque : MonoBehaviour
 {
 
     Enemigos enemigos;
-
+    bool ObjetivoLocalizado = false;
     GameObject Posicionjugador;
     float RangoDeAtaqueTomado = 0;
     //Enemigos enemigos;
@@ -14,7 +14,7 @@ public class EventoTanque : MonoBehaviour
     private void Awake()
     {
         Posicionjugador = GameObject.FindGameObjectWithTag("Player");
-
+        
 
     }
     void Start()
@@ -31,7 +31,8 @@ public class EventoTanque : MonoBehaviour
     public void EventoAtaqueTanque()
     {
         AnimationEvent EnemigoAttackevent = new AnimationEvent();
-        if (Physics.SphereCast(transform.position, 0.0f, transform.right, out RaycastHit Attackhit, 3.15f))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
+        ObjetivoLocalizado = true;
+        if (Physics.SphereCast(transform.position, 0.5f, new Vector3(3,3,3), out RaycastHit Attackhit, 3f))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
         {
 
             if (Attackhit.transform.gameObject.CompareTag("Player"))
@@ -42,7 +43,18 @@ public class EventoTanque : MonoBehaviour
             }
 
         }
+        
 
 
     }
+
+    private void OnTriggerEnter(Collider objetivo)
+    {
+        if (objetivo.transform.gameObject.CompareTag("Player"))
+        {
+            objetivo.GetComponent<MovimientoPersonaje>().JugadorRecibeAtaque();
+            ObjetivoLocalizado &= false;
+        }
+    }
+
 }
