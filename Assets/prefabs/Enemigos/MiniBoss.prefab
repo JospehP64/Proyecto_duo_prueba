@@ -62,7 +62,7 @@ MonoBehaviour:
   EnemySprite: {fileID: 3091123933621319135}
   EnemyAnimator: {fileID: 3693759935881985911}
   RadioDeAtaque: 3.15
-  RadioMaximoDeAtaque: 1
+  RadioMaximoDeAtaque: 2.5
   Spawnpoints: {fileID: 0}
   Char_SO: {fileID: 11400000, guid: 347040ac8acc9244dbfb1787d3196a2c, type: 2}
   Enem_SO: {fileID: 11400000, guid: 4620338992bb039479c5e6d041e2eff8, type: 2}
