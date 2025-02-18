@@ -33,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.875, y: 1.875, z: 1.6803176}
+  m_LocalScale: {x: 2.9025, y: 2.9025, z: 2.6011317}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 580950718941073627}
@@ -134,8 +134,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.945337, z: 0.99999976}
+  m_Center: {x: 0, y: 0.47266746, z: 0}
 --- !u!54 &2999777425779908309
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -234,9 +234,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4382027934433495842}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.038, y: 0.016, z: 0}
-  m_LocalScale: {x: 0.16725144, y: 0.16725144, z: 0.16725144}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.038000017, y: 0.614, z: 0}
+  m_LocalScale: {x: 0.16725147, y: 0.16725147, z: 0.16725144}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5748633577635769096}
@@ -292,7 +292,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!111 &3730154882583020316
 Animation:
   m_ObjectHideFlags: 0

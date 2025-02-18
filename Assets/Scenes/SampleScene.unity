@@ -6052,7 +6052,7 @@ MonoBehaviour:
   MonstruosASpawnear:
   - {fileID: 2530477218101224787, guid: 88af653028ac3d04ea1c8cfac75afa9f, type: 3}
   - {fileID: 2530477218101224787, guid: e66d47f2a40f0dc45a22f014e36110b3, type: 3}
-  - {fileID: 2530477218101224787, guid: 35355e5b954bb4641b0c58cf642a531b, type: 3}
+  - {fileID: 2530477218101224787, guid: ac0dd9ac93c859142a42bd48898832ee, type: 3}
   ObstaculosASpawnear:
   - {fileID: 6814483020168534931, guid: 3207f4b990ff5054d9c046a1dc541de9, type: 3}
   - {fileID: 6814483020168534931, guid: 675490526c02dd64d8037ec5cb313933, type: 3}
