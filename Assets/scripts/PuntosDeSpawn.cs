@@ -30,6 +30,8 @@ public class PuntosDeSpawn : MonoBehaviour
 
     private void Awake()
     {
+        rondas = 0;
+        
         EnemyRandomizer = Random.Range(0, 4);
 
         SpawnerRandomizer = Random.Range(0, 4);
@@ -38,11 +40,11 @@ public class PuntosDeSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        totalDeEnemigos = 0;
         
-        
+        enEjecucion = false;
 
 
-        
 
         StartCoroutine(InvocarEnemigos());
         
@@ -102,12 +104,17 @@ public class PuntosDeSpawn : MonoBehaviour
     {
        
 
-        if (totalDeEnemigos <= 0 && !enEjecucion)
+        if (totalDeEnemigos <= 0 && enEjecucion == false)
         {
+            
             enEjecucion = true;
 
         }
-        rondas += 1;
+        if (totalDeEnemigos <= 0)
+        {
+            rondas += 1;
+        }
+        
         if (rondas == 1)
         {
             
@@ -261,6 +268,7 @@ public class PuntosDeSpawn : MonoBehaviour
         }
         if (totalDeEnemigos >= 0 && enEjecucion)
         {
+            
             enEjecucion = false;
 
         }

@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class GameTitleManager : MonoBehaviour
 {
+    PuntosDeSpawn SpawnpointScript;
+    int rondaInicial;
+
     public static GameTitleManager GameManager;
  
     // Start is called before the first frame update
@@ -17,6 +20,7 @@ public class GameTitleManager : MonoBehaviour
     {
         
         SceneManager.LoadScene(1);
+        
     }
     public void IrAOpciones()
     {

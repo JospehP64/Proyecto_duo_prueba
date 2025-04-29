@@ -91,7 +91,7 @@ public class EVENTOSJUEGO : MonoBehaviour
         {
             CanvasGameOver.enabled = true;
             CanvasPausa.enabled = false;
-            Spawnpoints.rondas = 1;
+            
         }
     }
 
