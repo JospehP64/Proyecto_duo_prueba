@@ -57,6 +57,7 @@ MonoBehaviour:
   Posicionjugador: {fileID: 0}
   BalaASpawnear: {fileID: 2737912929795007935, guid: 783828ef3ba71cf44968914873bf0f8f,
     type: 3}
+  wizardAnimator: {fileID: 7524725934300917310}
 --- !u!114 &7954962080380971803
 MonoBehaviour:
   m_ObjectHideFlags: 0

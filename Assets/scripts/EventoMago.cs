@@ -11,6 +11,7 @@ public class EventoMago : MonoBehaviour
     Vector3 direccion;
     [SerializeField]GameObject BalaASpawnear;
     
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class EventoMago : MonoBehaviour
 
     private IEnumerator DispararDentroDeAlcance()
     {
+        
         while(true)
         {
             

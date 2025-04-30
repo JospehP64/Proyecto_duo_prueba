@@ -134,16 +134,17 @@ public class Enemigos : MonoBehaviour
         {
             if (Physics.SphereCast(transform.position, RadioDeAtaque, transform.right, out RaycastHit Attackhit, RadioMaximoDeAtaque))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
             {
+                EnemyAnimator.SetBool("MagoAttackCharge", true);
 
-                
-                
-               
-                
+
+
+
 
             }
             else
             {
-
+                EnemyAnimator.SetBool("MagoAttackCharge", false);
+                EnemyAnimator.SetBool("Mago_attacking", false);
             }
         }
     }
