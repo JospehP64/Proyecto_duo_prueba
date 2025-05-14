@@ -144,7 +144,7 @@ public class Enemigos : MonoBehaviour
             else
             {
                 EnemyAnimator.SetBool("MagoAttackCharge", false);
-                EnemyAnimator.SetBool("Mago_attacking", false);
+                
             }
         }
     }
@@ -209,12 +209,7 @@ public class Enemigos : MonoBehaviour
 
     }
 
-    public void ataqueDeEnemigo()
-    {
-        //ANTIGUO METODO. CORREGIR
-       
-        
-    }
+    
 
     public void enemigo_Recibe_Ataque()//Cuando es llamado por "Eventos_jugador", el enemigo recibe da�o
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
-using static UnityEditor.PlayerSettings;
+
 using Unity.Burst.CompilerServices;
 using System.Security.Cryptography;
 

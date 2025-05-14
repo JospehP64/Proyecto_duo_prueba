@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Scripting;
+
 [CreateAssetMenu(fileName = "Datos_Enemigos", menuName = "Datos_Enemigos")]
 public class Enemigos_SO : ScriptableObject
 {

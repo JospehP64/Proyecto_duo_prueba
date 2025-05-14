@@ -52,12 +52,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d84ce9a8b0fb894caf90e39e1e4f075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RadioDeAtaqueAdistancia: 3
-  RadioDeAtaqueADistanciaMaximo: 5
+  MagoAnimator: {fileID: 0}
+  RadioDeAtaqueAdistancia: 5
+  RadioDeAtaqueADistanciaMaximo: 15
   Posicionjugador: {fileID: 0}
   BalaASpawnear: {fileID: 2737912929795007935, guid: 783828ef3ba71cf44968914873bf0f8f,
     type: 3}
-  wizardAnimator: {fileID: 7524725934300917310}
 --- !u!114 &7954962080380971803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,8 +73,8 @@ MonoBehaviour:
   variante: mago
   EnemySprite: {fileID: 4382027934433495842}
   EnemyAnimator: {fileID: 6937978487711311420}
-  RadioDeAtaque: 3
-  RadioMaximoDeAtaque: 5
+  RadioDeAtaque: 5
+  RadioMaximoDeAtaque: 15
   Spawnpoints: {fileID: 0}
   Char_SO: {fileID: 11400000, guid: 347040ac8acc9244dbfb1787d3196a2c, type: 2}
   Enem_SO: {fileID: 11400000, guid: 4620338992bb039479c5e6d041e2eff8, type: 2}
@@ -234,7 +234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 580950718941073627}
-  - component: {fileID: 1668997029238290008}
+  - component: {fileID: 925453834438781315}
   - component: {fileID: 7937722107500156047}
   - component: {fileID: 4262018206282536238}
   - component: {fileID: 6937978487711311420}
@@ -260,7 +260,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5748633577635769096}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1668997029238290008
+--- !u!114 &925453834438781315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -269,9 +269,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4382027934433495842}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0eb219e11c915d44bdff5d469893bb2, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d84ce9a8b0fb894caf90e39e1e4f075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MagoAnimator: {fileID: 0}
+  RadioDeAtaqueAdistancia: 5
+  RadioDeAtaqueADistanciaMaximo: 15
+  Posicionjugador: {fileID: 0}
+  BalaASpawnear: {fileID: 2737912929795007935, guid: 783828ef3ba71cf44968914873bf0f8f,
+    type: 3}
 --- !u!212 &7937722107500156047
 SpriteRenderer:
   m_ObjectHideFlags: 0
