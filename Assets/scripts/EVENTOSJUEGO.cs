@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EVENTOSJUEGO : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class EVENTOSJUEGO : MonoBehaviour
     [SerializeField] Canvas CanvasPausa;
     [SerializeField]PuntosDeSpawn Spawnpoints;
     [SerializeField]MovimientoPersonaje PlayerScript;
+    [SerializeField] RawImage AvisoCoches;
     int vidaJugador;
      bool JuegoEnPausa = false;
     bool JugadorDerrotado;
@@ -40,7 +42,7 @@ public class EVENTOSJUEGO : MonoBehaviour
 
         CanvasPausa.enabled = false;
         CanvasGameOver.enabled = false;
-        
+        AvisoCoches.enabled = false;
     }
     private void Update()
     {
@@ -94,5 +96,13 @@ public class EVENTOSJUEGO : MonoBehaviour
             
         }
     }
-
+    public void AvisoDePeligroDeVehiculos()
+    {
+        AvisoCoches.enabled = true;
+    }
+    public void DesactivarPeligroDeVehículos()
+    {
+        AvisoCoches.enabled = false;
+    }
 }
+

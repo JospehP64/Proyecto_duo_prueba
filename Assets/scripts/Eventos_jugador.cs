@@ -4,54 +4,63 @@ using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-
-
+using System;
 
 public class Eventos_jugador : MonoBehaviour
 {
+    MovimientoPersonaje PlayerMovementsScript;
+
     PuntosDeSpawn SpawnPoints;// Coge la variable Spawnpoints.totalDeEnemigos para que, al destruir a un enemigo, se reste el numero de enemigos en escena y, si hay menos del total, se spawneen
     Enemigos Enemy;
     [SerializeField] Personajes_SO Char_SO;
     //[SerializeField]int Enemy_life;
     GameObject enemigos_ajenos;
     public int player_damage;
-    [SerializeField]MovimientoPersonaje MovPersonaje;
+    [SerializeField] MovimientoPersonaje MovPersonaje;
     [SerializeField] RawImage rawCorazon;
     [SerializeField] RawImage rawCorazon_2;
     [SerializeField] RawImage rawCorazon_3;
+    public RawImage playerFace_icon;
     [SerializeField] Texture[] TexturaCorazon;
+    public Texture[] Rostro_jugador;
+
+    public RawImage PlayFace;
     RawImage corazon01;
     RawImage corazon03;
     RawImage corazon02;
     int vidaGUI;
+    bool PlayerGetsHurt;
+
+    
     private void Start()
     {
+        
 
-        
-       // Enemy = GameObject.FindAnyObjectByType<Enemigos>(); //Para tomar el valor del codigo del enemigo //IMPORTANTE
-        
+        // Enemy = GameObject.FindAnyObjectByType<Enemigos>(); //Para tomar el valor del codigo del enemigo //IMPORTANTE
+
 
 
         //player_damage = Char_SO.ataque_personajes;
 
         vidaGUI = MovPersonaje.vida;
+        PlayFace = (RawImage)playerFace_icon.GetComponent<RawImage>();
         corazon01 = (RawImage)rawCorazon.GetComponent<RawImage>();
         corazon02 = (RawImage)rawCorazon_2.GetComponent<RawImage>();
         corazon03 = (RawImage)rawCorazon_3.GetComponent<RawImage>();
 
-        
+
 
         corazon01.texture = (Texture)TexturaCorazon[0];
         corazon02.texture = (Texture)TexturaCorazon[0];
         corazon03.texture = (Texture)TexturaCorazon[0];
+        PlayFace.texture = (Texture)Rostro_jugador[0];
 
-        
     }
     private void Update()
     {
-        
 
-        vidaGUI =  MovPersonaje.vida;
+
+        vidaGUI = MovPersonaje.vida;
         if (vidaGUI >= 3)
         {
             corazon01.texture = (Texture)TexturaCorazon[0];
@@ -78,6 +87,13 @@ public class Eventos_jugador : MonoBehaviour
         }
     }
 
+    public void PlayerRecievesAttack()
+    {
+        
+            PlayFace.texture = (Texture)Rostro_jugador[2];
+        
+        
+    }
     public void player_melee_attack()
     {
         
@@ -88,6 +104,7 @@ public class Eventos_jugador : MonoBehaviour
         
         if (Input.GetMouseButton(0))
         {
+            PlayFace.texture = (Texture)Rostro_jugador[1];
             if (Physics.SphereCast(transform.position, 0.75f, transform.right, out RaycastHit playerhit, 3f))
             {
                 if (playerhit.transform.gameObject.CompareTag("enemigo"))
@@ -98,6 +115,10 @@ public class Eventos_jugador : MonoBehaviour
                 }
                     
             }
+        }
+        else if (!Input.GetMouseButton(0))
+        {
+            PlayFace.texture = (Texture)Rostro_jugador[0];
         }
        
 

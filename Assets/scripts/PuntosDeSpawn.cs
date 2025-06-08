@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 
 public class PuntosDeSpawn : MonoBehaviour
 {
-    
+    [SerializeField]EVENTOSJUEGO GameEvents;
     
     
 
@@ -16,6 +16,7 @@ public class PuntosDeSpawn : MonoBehaviour
     [SerializeField] Transform[] PuntosDeObstaculo;
     [SerializeField] GameObject[] MonstruosASpawnear;
     [SerializeField] GameObject[] ObstaculosASpawnear;
+    bool AvisarDeCoche;
     float TiempoDeEsperaAObstaculos = 0;
 
     int ObstacleRandomizer, ObstacleLocation;//La posibilidad de que se genere un coche de un tipo y de que se invoque en un generador o "spawner" aleatorio
@@ -40,6 +41,8 @@ public class PuntosDeSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //GameEvents  = GameObject.Find("Admin de Puntos de spawn").GetComponent<EVENTOSJUEGO>();
+        AvisarDeCoche = false;
         totalDeEnemigos = 0;
         
         enEjecucion = false;
@@ -280,10 +283,19 @@ public class PuntosDeSpawn : MonoBehaviour
         yield return new WaitForSeconds(5);
         for (int CARTIME = 0; CARTIME < 6; CARTIME++)
         {
+            
             ObstacleRandomizer = Random.Range(0, 5);
             ObstacleLocation = Random.Range(0, 7);//Punto aleatorio donde se generará el obstáculo
             Instantiate(ObstaculosASpawnear[ObstacleRandomizer], PuntosDeObstaculo[ObstacleLocation].position, Quaternion.identity);
+            //GameEvents.GetComponent<EVENTOSJUEGO>().AvisoDePeligroDeVehiculos();
+            AvisarDeCoche = true;
             yield return new WaitForSeconds(5);
+            if (AvisarDeCoche == true)
+            {
+                GameEvents.GetComponent<EVENTOSJUEGO>().DesactivarPeligroDeVehículos();
+                AvisarDeCoche = false;
+            }
+            //GetComponent<EVENTOSJUEGO>().DesactivarPeligroDeVehículos();
         }
     }
 }

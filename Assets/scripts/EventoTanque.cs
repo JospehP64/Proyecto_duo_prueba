@@ -41,6 +41,7 @@ public class EventoTanque : MonoBehaviour
 
                 Attackhit.collider.GetComponent<MovimientoPersonaje>().JugadorRecibeAtaque();
 
+
             }
 
         }

@@ -18,10 +18,10 @@ public class balaMago : MonoBehaviour
     void Start()
     {
        PlayerTargetPosition = GameObject.FindGameObjectWithTag("Player");
-       VelocidadDeBalasDeMago = Balas_SO.velocidadDeBala;
+       
 
         rb = gameObject.GetComponent<Rigidbody>();
-        VelocidadDeBalasDeMago = Balas_SO.velocidadDeBala;
+        
         direccionBala = PlayerTargetPosition.transform.position - transform.position;
         tiempodeBala = Balas_SO.tiempoDeVida;
     
@@ -29,17 +29,14 @@ public class balaMago : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    
+    private void FixedUpdate()
     {
-        
         MovimientoDeBala();
-       
-        
     }
-
     void MovimientoDeBala()
     {
-        rb.MovePosition(transform.position + (direccionBala * VelocidadDeBalasDeMago * Time.deltaTime));
+        rb.MovePosition(transform.position + (direccionBala * VelocidadDeBalasDeMago * Time.fixedDeltaTime));
         Destroy(gameObject, 5);
         
     }

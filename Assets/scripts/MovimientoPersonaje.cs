@@ -20,7 +20,7 @@ public class MovimientoPersonaje : MonoBehaviour
     [SerializeField] TextMeshProUGUI TextVida;
     [SerializeField] TextMeshProUGUI TextEnergia;
     Vector3 salto = new Vector3(0, 2f, 0);
-    
+    public bool PlayerTakesDamage;
    
     
     
@@ -32,6 +32,7 @@ public class MovimientoPersonaje : MonoBehaviour
     
     void Start()
     {
+        PlayerTakesDamage = false;
         PlayerIsDefeated = false;
         sprite_personaje.transform.eulerAngles = new Vector3(0, 180, 0);
         vida = valor_personajes.vida_personajes;
@@ -162,14 +163,16 @@ public class MovimientoPersonaje : MonoBehaviour
 
     public void JugadorRecibeAtaque()
     {
+        
         vida--;
         animatorPlayer.SetTrigger("recieve damage");
+        animatorPlayer.GetComponent<Eventos_jugador>().PlayerRecievesAttack();
         if (vida <= 0)
         {
             PlayerIsDefeated = true;
             Destroy(gameObject);
         }
-
+        
     }
 
 

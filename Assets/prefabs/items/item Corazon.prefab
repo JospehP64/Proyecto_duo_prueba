@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2310175111802774295}
   - component: {fileID: 8468681814171341549}
   - component: {fileID: 7640989606808490653}
+  - component: {fileID: 5463663921656606913}
+  - component: {fileID: 3992197728473424196}
   m_Layer: 0
   m_Name: item Corazon
   m_TagString: curable
@@ -147,3 +149,39 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.03, y: 1.84, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!111 &5463663921656606913
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2237634037621769332}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 3fdc9b8a8c4f73246aa7ee37517d453a, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &3992197728473424196
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2237634037621769332}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 247bc3d127938a14582fd3d70a7396a6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
