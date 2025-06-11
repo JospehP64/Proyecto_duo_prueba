@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
+    [SerializeField] GUI_SO Play_GUI_SO;
     public bool PlayerIsDefeated;
     [SerializeField]GameObject sprite_personaje;
     Enemigos enemy;
@@ -33,6 +34,7 @@ public class MovimientoPersonaje : MonoBehaviour
     void Start()
     {
         PlayerTakesDamage = false;
+        
         PlayerIsDefeated = false;
         sprite_personaje.transform.eulerAngles = new Vector3(0, 180, 0);
         vida = valor_personajes.vida_personajes;
@@ -45,7 +47,7 @@ public class MovimientoPersonaje : MonoBehaviour
     void Update()
     {
 
-
+        ElJugadorPierde();
 
         TextVida.SetText("Vida: " + vida);
         TextEnergia.SetText("energ�a: " + energia);
@@ -53,7 +55,7 @@ public class MovimientoPersonaje : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Time.timeScale != 0)
         {
             animatorPlayer.SetTrigger("attack");
 
@@ -118,11 +120,11 @@ public class MovimientoPersonaje : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            velocidad = 8;
+            velocidad = 10;
         }
         else
         {
-            velocidad = 3;
+            velocidad = 5;
         }
         
     }
@@ -169,11 +171,26 @@ public class MovimientoPersonaje : MonoBehaviour
         animatorPlayer.GetComponent<Eventos_jugador>().PlayerRecievesAttack();
         if (vida <= 0)
         {
+            
+            Destroy(gameObject, 0.5f);
             PlayerIsDefeated = true;
-            Destroy(gameObject);
         }
         
     }
+    public void ElJugadorPierde()
+    {
+        Play_GUI_SO.PlayeLoses = PlayerIsDefeated;
+        if (vida <= 0 && PlayerIsDefeated == true)
+        {
+            
+        }
+        else
+        {
+
+        }
+        
+    }
+   
 
 
 }

@@ -49,8 +49,7 @@ public class EventoMago : MonoBehaviour
     private IEnumerator DispararDentroDeAlcance()
     {
 
-        while (true)
-        {
+        
 
             yield return new WaitForSeconds(1);
             Instantiate(BalaASpawnear, transform.position, quaternion.identity);
@@ -62,7 +61,7 @@ public class EventoMago : MonoBehaviour
             //    StartCoroutine(InvocarBalas());
             //    direccion = Posicionjugador.transform.position - transform.position;
 
-        }
+        
 
     }
 

@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e753a9c42db1da5479ac9f346a939d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Play_GUI_SO: {fileID: 11400000, guid: 07f191c8feaa1ec459bddaa9ab260e7b, type: 2}
   PlayerIsDefeated: 0
   sprite_personaje: {fileID: 5596612854332753032}
   valor_personajes: {fileID: 11400000, guid: 347040ac8acc9244dbfb1787d3196a2c, type: 2}
@@ -59,6 +60,7 @@ MonoBehaviour:
   vida: 3
   TextVida: {fileID: 0}
   TextEnergia: {fileID: 0}
+  PlayerTakesDamage: 0
 --- !u!33 &5679233929997731143
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -447,9 +449,12 @@ MonoBehaviour:
   rawCorazon: {fileID: 0}
   rawCorazon_2: {fileID: 0}
   rawCorazon_3: {fileID: 0}
+  playerFace_icon: {fileID: 0}
   TexturaCorazon:
   - {fileID: 2800000, guid: cdb78edb3b629c54c981b818d01c8f2c, type: 3}
   - {fileID: 2800000, guid: 23bf822541c967e4ea8d2c46e07998c7, type: 3}
+  Rostro_jugador: []
+  PlayFace: {fileID: 0}
 --- !u!212 &4337189803854450152
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EventosEnemigo : MonoBehaviour
 {
-   
+    
     Enemigos enemigos;
 
     GameObject Posicionjugador;

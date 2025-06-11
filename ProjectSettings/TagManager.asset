@@ -11,6 +11,13 @@ TagManager:
   - invisible_wall
   - coche
   - bala
+  - Objetivo_coche
+  - Objetivo_coche_02
+  - Objetivo_coche_03
+  - Objetivo_coche_04
+  - boss
+  - attack_area
+  - ranged_attack_area
   layers:
   - Default
   - TransparentFX

@@ -131,11 +131,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4860905736350533412}
-  - component: {fileID: 312065440400957895}
   - component: {fileID: 3574503011022201532}
   - component: {fileID: 7859208737791350921}
   - component: {fileID: 8051504557290172661}
   - component: {fileID: 1543933106913088399}
+  - component: {fileID: 8123237803759299546}
+  - component: {fileID: -1493801681091911431}
   m_Layer: 0
   m_Name: Obstaculo Coche
   m_TagString: coche
@@ -154,25 +155,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 17.79, y: 3.79, z: -4.53}
   m_LocalScale: {x: 4.9428, y: 2.585, z: 3.236}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5303673464289301821}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &312065440400957895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6814483020168534931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1173a3b08925494b8bdcbea570bb0f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Balas_SO: {fileID: 11400000, guid: 3bd4698d058cacf4c80b9bd5fc3d89c3, type: 2}
-  VelocidadDeBalasDeMago: 1
 --- !u!33 &3574503011022201532
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -271,3 +258,38 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &8123237803759299546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6814483020168534931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e971247465e24949a5e01d7feeb5b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Balas_SO: {fileID: 11400000, guid: 3bd4698d058cacf4c80b9bd5fc3d89c3, type: 2}
+  VelocidadDeCoches: 1
+  TagDeObjetivo: Objetivo_coche
+--- !u!1818360608 &-1493801681091911431
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6814483020168534931}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_TranslationAtRest: {x: 17.79, y: 3.79, z: -4.53}
+  m_TranslationOffset: {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 0
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 0
+  m_Active: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 4860905736350533412}
+    weight: 1

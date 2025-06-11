@@ -62,16 +62,16 @@ MonoBehaviour:
   variante: corredor
   EnemySprite: {fileID: 4382027934433495842}
   EnemyAnimator: {fileID: 3619775989314101742}
-  RadioDeAtaque: 0.3
-  RadioMaximoDeAtaque: 0.5
+  RadioDeAtaque: 0.5
+  RadioMaximoDeAtaque: 0.75
   Spawnpoints: {fileID: 0}
   Char_SO: {fileID: 11400000, guid: 347040ac8acc9244dbfb1787d3196a2c, type: 2}
   Enem_SO: {fileID: 11400000, guid: 4620338992bb039479c5e6d041e2eff8, type: 2}
   Drop_enemigo: {fileID: 2237634037621769332, guid: fe03aabfbb8751d44b0373cc72c9ddf0,
     type: 3}
-  velocidadEnemigo: 1
-  RadioDeAlcance: 0.75
-  RadioDeAlcanceMaximo: 5
+  velocidadEnemigo: 1.3
+  RadioDeAlcance: 0.5
+  RadioDeAlcanceMaximo: 30
   resistencia: 3
 --- !u!23 &3042543268911515347
 MeshRenderer:
@@ -134,8 +134,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 0.47518638}
+  m_Center: {x: 0, y: 0, z: -0.0050034234}
 --- !u!54 &2999777425779908309
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -238,7 +238,8 @@ Transform:
   m_LocalPosition: {x: 0.038, y: 0.016, z: 0}
   m_LocalScale: {x: 0.16725144, y: 0.16725144, z: 0.16725144}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8696940407690258912}
   m_Father: {fileID: 5748633577635769096}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6857336893230375584
@@ -343,3 +344,97 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &8179965291764007015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8696940407690258912}
+  - component: {fileID: 6767222725270905346}
+  - component: {fileID: 2420352417306206211}
+  - component: {fileID: 2068310986456148263}
+  m_Layer: 0
+  m_Name: Attack_point
+  m_TagString: attack_area
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8696940407690258912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179965291764007015}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.01116067, w: 0.9999377}
+  m_LocalPosition: {x: -0.08968531, y: -1.0111862, z: 0}
+  m_LocalScale: {x: 5.496902, y: 11.66084, z: 4.7921114}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 580950718941073627}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.279}
+--- !u!54 &6767222725270905346
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179965291764007015}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &2420352417306206211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179965291764007015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fbb0da92ba2584e8c8b383a422091a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &2068310986456148263
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179965291764007015}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}

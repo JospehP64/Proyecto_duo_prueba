@@ -45,7 +45,7 @@ public class Enemigos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
 
        Spawnpoints = GetComponent<PuntosDeSpawn>();
         Posicionjugador = GameObject.FindGameObjectWithTag("Player");
@@ -79,7 +79,7 @@ public class Enemigos : MonoBehaviour
 
     private void enemigo_detecta_jugador()
     {
-        direccion = Posicionjugador.transform.position - transform.position;
+        direccion = Posicionjugador.transform.position - transform.position;    
         if (Physics.SphereCast(transform.position, RadioDeAlcance, direccion, out RaycastHit EnemigoCollHit, RadioDeAlcanceMaximo))
         {
             caminar = true;
@@ -122,7 +122,7 @@ public class Enemigos : MonoBehaviour
 
                 caminar = false;
                 EnemyAnimator.SetTrigger("tanque_attack");
-
+                    
 
             }
             else
@@ -132,7 +132,9 @@ public class Enemigos : MonoBehaviour
         }
         else if (variante == "mago")
         {
-            if (Physics.SphereCast(transform.position, RadioDeAtaque, transform.right, out RaycastHit Attackhit, RadioMaximoDeAtaque))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
+            
+
+            if (Physics.SphereCast(transform.position, RadioDeAtaque, transform.right, out RaycastHit Attackhit, RadioMaximoDeAtaque) || Physics.SphereCast(transform.position, RadioDeAtaque, transform.forward, out  Attackhit, RadioMaximoDeAtaque))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
             {
                 EnemyAnimator.SetBool("MagoAttackCharge", true);
 
@@ -144,6 +146,7 @@ public class Enemigos : MonoBehaviour
             else
             {
                 EnemyAnimator.SetBool("MagoAttackCharge", false);
+                
                 
             }
         }
@@ -157,29 +160,29 @@ public class Enemigos : MonoBehaviour
 
     void movimientoEnemigo()
     {
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+        float hE = Posicionjugador.transform.position.x - transform.position.x;
+        float vE = Posicionjugador.transform.position.z - transform.position.z;
 
         if (caminar == true)
         {
             if (variante == "corredor")
             {
-                EnemyAnimator.SetBool("caminar_corredor", true);
-                if (transform.position.x > 0 || transform.position.x > 0 && transform.position.z > 0 || transform.position.x > 0 && transform.position.z < 0)
-                {
-                    
-                    EnemySprite.transform.eulerAngles = new Vector3(0, 0, 0);
-                }
-                else if (transform.position.x < 0 || transform.position.x < 0 && transform.position.z > 0 || transform.position.x < 0 && transform.position.z < 0)
-                {
-                    
-                    EnemySprite.transform.eulerAngles = new Vector3(0, -180, 0);
-                }
-                else if (transform.position.z > 0 || transform.position.z < 0)
-                {
-                    
-                }
                 
+                if (hE > 0 || hE > 0 && vE > 0 || hE > 0 && vE < 0)
+                {
+                    EnemyAnimator.SetBool("caminar_corredor", true); ;
+                    transform.eulerAngles = new Vector3(0, 0, 0);
+                }
+                else if (hE < 0 || hE < 0 && vE > 0 || hE < 0 && vE < 0)
+                {
+                    EnemyAnimator.SetBool("caminar_corredor", true);
+                    transform.eulerAngles = new Vector3(0, 180, 0);
+                }
+                else if (vE > 0 || vE < 0)
+                {
+                    EnemyAnimator.SetBool("caminar_corredor", true);
+                }
+
             }
             
             rb.MovePosition(transform.position + (direccion * velocidadEnemigo * Time.deltaTime));
@@ -187,6 +190,20 @@ public class Enemigos : MonoBehaviour
             if (variante == "tanque")
             {
                 EnemyAnimator.SetBool("tanque_walk", true);
+                if (hE > 0 || hE > 0 && vE > 0 || hE > 0 && vE < 0)
+                {
+                    EnemyAnimator.SetBool("tanque_walk", true);
+                    transform.eulerAngles = new Vector3(0, 0, 0);
+                }
+                else if (hE < 0 || hE < 0 && vE > 0 || hE < 0 && vE < 0)
+                {
+                    EnemyAnimator.SetBool("tanque_walk", true);
+                    transform.eulerAngles = new Vector3(0, 180, 0);
+                }
+                else if (vE > 0 || vE < 0)
+                {
+                    EnemyAnimator.SetBool("tanque_walk", true);
+                }
             }
 
             rb.MovePosition(transform.position + (direccion * velocidadEnemigo * Time.deltaTime));

@@ -9,7 +9,7 @@ using System;
 public class Eventos_jugador : MonoBehaviour
 {
     MovimientoPersonaje PlayerMovementsScript;
-
+    
     PuntosDeSpawn SpawnPoints;// Coge la variable Spawnpoints.totalDeEnemigos para que, al destruir a un enemigo, se reste el numero de enemigos en escena y, si hay menos del total, se spawneen
     Enemigos Enemy;
     [SerializeField] Personajes_SO Char_SO;
@@ -113,7 +113,14 @@ public class Eventos_jugador : MonoBehaviour
                     
                     playerhit.collider.gameObject.GetComponent<Enemigos>().enemigo_Recibe_Ataque();//Llama al metodo "Enemig_Recibe_Ataque" del script "Enemigos"
                 }
-                    
+                else if (playerhit.transform.gameObject.CompareTag("boss"))
+                {
+
+
+                    playerhit.collider.gameObject.GetComponent<Boss_Script>().bossRecibeAtaque();//Llama al metodo "Enemig_Recibe_Ataque" del script "Enemigos"
+                }
+
+
             }
         }
         else if (!Input.GetMouseButton(0))
