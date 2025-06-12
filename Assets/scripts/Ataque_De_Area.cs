@@ -37,5 +37,6 @@ public class Ataque_De_Area : MonoBehaviour
             collide.GetComponent<MovimientoPersonaje>().JugadorRecibeAtaque();
    
         }
+        
     }
 }

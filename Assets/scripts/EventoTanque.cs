@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class EventoTanque : MonoBehaviour
 {
-
-    Enemigos enemigos;
-    
+    [SerializeField] AudioClip SoundsArray;
+    [SerializeField] AudioSource EnemySounds;
+    [SerializeField]Enemigos enemigos;
+    [SerializeField] Animator TanqueAnimator;
     GameObject Posicionjugador;
-    float RangoDeAtaqueTomado = 0;
+    float RangoDeAtaqueminimo, RangoDeAtaqueMaximo;
+    
     //Enemigos enemigos;
     // Start is called before the first frame update
     private void Awake()
@@ -25,6 +27,10 @@ public class EventoTanque : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0)
+        {
+            EnemySounds.Stop();
+        }
 
     }
 
@@ -32,17 +38,22 @@ public class EventoTanque : MonoBehaviour
     {
         AnimationEvent EnemigoAttackevent = new AnimationEvent();
         
-        if (Physics.SphereCast(transform.position, 0.5f, transform.right, out RaycastHit Attackhit, 0.75f))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
+        if (Physics.SphereCast(transform.position, RangoDeAtaqueminimo, transform.right, out RaycastHit Attackhit, RangoDeAtaqueMaximo))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
         {
-
+            
 
             if (Attackhit.transform.gameObject.CompareTag("Player"))
             {
-
+                
                 Attackhit.collider.GetComponent<MovimientoPersonaje>().JugadorRecibeAtaque();
-
+                
 
             }
+            
+
+        }
+        else
+        {
 
         }
         
@@ -50,6 +61,15 @@ public class EventoTanque : MonoBehaviour
 
     }
 
-    
+    public void RugidoTanque()
+    {
+        AnimationEvent TanqueRoarEvent = new AnimationEvent();
+        if (Time.timeScale != 0)
+        {
+            EnemySounds.PlayOneShot(SoundsArray);
+        }
+        
+
+    }
 
 }

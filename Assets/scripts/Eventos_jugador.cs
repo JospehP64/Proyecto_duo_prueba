@@ -8,6 +8,8 @@ using System;
 
 public class Eventos_jugador : MonoBehaviour
 {
+    [SerializeField] AudioClip[] SoundsArray;
+    [SerializeField] AudioSource characterSounds;
     MovimientoPersonaje PlayerMovementsScript;
     
     PuntosDeSpawn SpawnPoints;// Coge la variable Spawnpoints.totalDeEnemigos para que, al destruir a un enemigo, se reste el numero de enemigos en escena y, si hay menos del total, se spawneen
@@ -34,7 +36,7 @@ public class Eventos_jugador : MonoBehaviour
     
     private void Start()
     {
-        
+        characterSounds = GetComponent<AudioSource>();
 
         // Enemy = GameObject.FindAnyObjectByType<Enemigos>(); //Para tomar el valor del codigo del enemigo //IMPORTANTE
 
@@ -58,7 +60,10 @@ public class Eventos_jugador : MonoBehaviour
     }
     private void Update()
     {
-
+        if (Time.timeScale == 0)
+        {
+            characterSounds.Stop();
+        }
 
         vidaGUI = MovPersonaje.vida;
         if (vidaGUI >= 3)
@@ -133,5 +138,20 @@ public class Eventos_jugador : MonoBehaviour
 
 
     }
-
+    public void SonidoSalto()
+    {
+        characterSounds.PlayOneShot(SoundsArray[3]);
+    }
+    public void Sonidocaminar()
+    {
+        characterSounds.PlayOneShot(SoundsArray[0]);
+    }
+    public void SonidoGolpear()
+    {
+        characterSounds.PlayOneShot(SoundsArray[2]);
+    }
+    public void SonidoRecibirAtaque()
+    {
+        characterSounds.PlayOneShot(SoundsArray[1]);
+    }
 }

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Boss_Script : MonoBehaviour
 {
+    
     float HurtTime;
     [SerializeField] Personajes_SO Player_SO;
     [SerializeField] Enemigos_SO Enem_SO;
@@ -21,9 +22,9 @@ public class Boss_Script : MonoBehaviour
     
     void Start()
     {
-       
-
         
+
+
         BossSprite.color = Color.white;
         BossAnimator.SetBool("is_idling", true);
         BossAnimator.SetBool("is_charging", false);
@@ -52,29 +53,37 @@ public class Boss_Script : MonoBehaviour
         {
             if (ResistenciaDeBoss <= 50)
             {
+                
                 Debug.Log("EL BOSS ESTÁ INMOBIL");
                 yield return new WaitForSeconds(1);
+
                 Debug.Log("EL BOSS ESTÁ CARGANDO SU ATAQUE");
                 BossAnimator.SetBool("is_charging", true);
                 BossAnimator.SetBool("is_idling", false);
                 yield return new WaitForSeconds(3);
                 Debug.Log("EL BOSS DISPARA EL ATAQUE");
                 BossAnimator.SetBool("is_charging", false);
+                
                 BossAnimator.SetTrigger("Is_shooting");
                 BossAnimator.SetBool("is_idling", false);
+                yield return new WaitForSeconds(3);
             }
             else
             {
+
                 Debug.Log("EL BOSS ESTÁ INMOBIL");
                 yield return new WaitForSeconds(3);
+
                 Debug.Log("EL BOSS ESTÁ CARGANDO SU ATAQUE");
                 BossAnimator.SetBool("is_charging", true);
                 BossAnimator.SetBool("is_idling", false);
                 yield return new WaitForSeconds(3);
                 Debug.Log("EL BOSS DISPARA EL ATAQUE");
                 BossAnimator.SetBool("is_charging", false);
+                
                 BossAnimator.SetTrigger("Is_shooting");
                 BossAnimator.SetBool("is_idling", false);
+                yield return new WaitForSeconds(3);
             }
             
             

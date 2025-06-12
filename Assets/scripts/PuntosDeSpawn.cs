@@ -40,6 +40,7 @@ public class PuntosDeSpawn : MonoBehaviour
 
     private void Awake()
     {
+        AvisarDeCoche = false;
         PuntosDeSpawneoDeEnemigos[0].SetActive(false);
         PuntosDeSpawneoDeEnemigos[1].SetActive(false);
         PuntosDeSpawneoDeEnemigos[2].SetActive(false);
@@ -88,7 +89,7 @@ public class PuntosDeSpawn : MonoBehaviour
 
     private void ContarObstaculo()
     {
-        if (TiempoDeEsperaAObstaculos >= 5)
+        if (TiempoDeEsperaAObstaculos >= 10 && PlayerDefeatsBoss == false)
         {
             StartCoroutine(InvocarObstaculos());
             TiempoDeEsperaAObstaculos = 0;
@@ -299,19 +300,25 @@ public class PuntosDeSpawn : MonoBehaviour
     IEnumerator InvocarObstaculos()
     {
         yield return new WaitForSeconds(5);
-        for (int CARTIME = 0; CARTIME < 6; CARTIME++)
+        for (int CARTIME = 0; CARTIME < 1; CARTIME++)
         {
             if ( PlayerDefeatsBoss == false)
             {
-                AvisarDeCoche = false;
-                ObstacleRandomizer = Random.Range(0, 5);
-                ObstacleLocation = Random.Range(0, 7);//Punto aleatorio donde se generará el obstáculo
+                
+                ObstacleRandomizer = Random.Range(0, 4);
+                ObstacleLocation = Random.Range(0, 6);//Punto aleatorio donde se generará el obstáculo
 
                 yield return new WaitForSeconds(8);
                 AvisarDeCoche = true;
+                yield return new WaitForSeconds(1);
                 Instantiate(ObstaculosASpawnear[ObstacleRandomizer], PuntosDeObstaculo[ObstacleLocation].position, Quaternion.identity);
+                AvisarDeCoche = false;
                 yield return new WaitForSeconds(1);
                 
+
+            }else
+            {
+                StopAllCoroutines();
             }
             
 

@@ -9,17 +9,13 @@ using UnityEngine.Audio;
 
 public class GameTitleManager : MonoBehaviour
 {
-    public float VolumeUnit;
-    [SerializeField] Scrollbar MusicScrollBar;
     public static GameTitleManager gametitleInstance;
-    [SerializeField]GUI_SO MusicAndSoundManagerGUI;
+
     PuntosDeSpawn SpawnpointScript;
     int rondaInicial;
-    [SerializeField]int EscenaActual;
-    [SerializeField] bool MuteMusicAndSound;
-    [SerializeField]AudioSource AudioManager;
-    [SerializeField]AudioClip[] AudioClipManager;
-    [SerializeField] MusicaYSonido_SO MusicaYSonido_SO;//NO CONFUNDIR CON MUSICAndSpundManagerGUI
+    
+    
+    
     public static GameTitleManager GameManager;
 
 
@@ -27,7 +23,6 @@ public class GameTitleManager : MonoBehaviour
 
     private void Awake()
     {
-        
         if (gametitleInstance == null)
         {
             gametitleInstance = this;
@@ -37,45 +32,15 @@ public class GameTitleManager : MonoBehaviour
         {
             Destroy(gametitleInstance);
         }
+
+
         
-        
-        AudioManager = GetComponent<AudioSource>();
     }
     private void Update()
     {
         
         
-        AudioManager.mute = MuteMusicAndSound;
-        EscenaActual = SceneManager.GetActiveScene().buildIndex;
-        if (EscenaActual != 1)
-        {
-            
-            
-            
-            AudioManager.PlayOneShot(AudioClipManager[0]);
-
-        }
-        else if (EscenaActual == 1 && MusicAndSoundManagerGUI.PlayerWins == true  && MusicAndSoundManagerGUI.PlayeLoses == false)
-        {
-
-
-
-            AudioManager.PlayOneShot(AudioClipManager[1]);
-
-        }
-        else if (EscenaActual == 1 && MusicAndSoundManagerGUI.PlayerWins == false && MusicAndSoundManagerGUI.PlayeLoses == true)
-        {
-           
-            
-            AudioManager.PlayOneShot(AudioClipManager[2]);
-
-        }
-        else if (EscenaActual == 1 && MusicAndSoundManagerGUI.PlayerWins == false  && MusicAndSoundManagerGUI.PlayeLoses == false)
-        {
-            
-            
-            AudioManager.PlayOneShot(AudioClipManager[3]);
-        }
+       
         
 
 
@@ -111,18 +76,6 @@ public class GameTitleManager : MonoBehaviour
         SceneManager.LoadScene(3);
 
     }
-    public void MuteMusicAndAudio()
-    {
-        
-        if (MuteMusicAndSound == true)
-        {
-            MuteMusicAndSound = false;
-        }
-        else
-        {
-            MuteMusicAndSound = true;
-
-        }
-    }
+    
     
 }

@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class balaMago : MonoBehaviour
 {
+
+
+    [SerializeField] AudioClip SoundsArray;
+    [SerializeField] AudioSource bulletSounds;
     Rigidbody rb;
  [SerializeField] Datos_Balas Balas_SO;//Scriptable Object para las balas o proyectiles
  [SerializeField]float VelocidadDeBalasDeMago;// velocidad de esta bala   
@@ -17,12 +20,18 @@ public class balaMago : MonoBehaviour
 
     void Start()
     {
-       PlayerTargetPosition = GameObject.FindGameObjectWithTag("Player");
+        if (Time.timeScale != 0)
+        {
+            bulletSounds.PlayOneShot(SoundsArray);
+        }
+        
+        PlayerTargetPosition = GameObject.FindGameObjectWithTag("Player");
        
 
         rb = gameObject.GetComponent<Rigidbody>();
         
         direccionBala = PlayerTargetPosition.transform.position - transform.position;
+        
         tiempodeBala = Balas_SO.tiempoDeVida;
     
          
@@ -32,13 +41,20 @@ public class balaMago : MonoBehaviour
     
     private void FixedUpdate()
     {
+       
+        
         MovimientoDeBala();
     }
     void MovimientoDeBala()
     {
+        if (Time.timeScale == 0)
+        {
+            bulletSounds.Stop();
+        }
+        direccionBala = direccionBala.normalized;
         rb.MovePosition(transform.position + (direccionBala * VelocidadDeBalasDeMago * Time.fixedDeltaTime));
         Destroy(gameObject, 5);
-        
+
     }
      private void OnTriggerEnter(Collider collide) 
      {

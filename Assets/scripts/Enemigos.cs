@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class Enemigos : MonoBehaviour
 {
-    
+    [SerializeField] AudioClip[] SoundsArray;
+    [SerializeField] AudioSource EnemySounds;
     bool caminar;
     bool atacar;
 
@@ -45,9 +46,9 @@ public class Enemigos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        EnemySounds = GetComponent<AudioSource>();
 
-
-       Spawnpoints = GetComponent<PuntosDeSpawn>();
+        Spawnpoints = GetComponent<PuntosDeSpawn>();
         Posicionjugador = GameObject.FindGameObjectWithTag("Player");
 
         
@@ -62,6 +63,10 @@ public class Enemigos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0)
+        {
+            EnemySounds.Stop();
+        }
         enemigo_detecta_jugador();
 
         
@@ -102,11 +107,12 @@ public class Enemigos : MonoBehaviour
         if (variante == "corredor")
         {
 
-            if (Physics.SphereCast(transform.position, RadioDeAtaque, transform.right, out RaycastHit Attackhit, RadioMaximoDeAtaque))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
+            if (Physics.SphereCast(transform.position, RadioDeAtaque, transform.right, out RaycastHit Attackhit, RadioMaximoDeAtaque) && Attackhit.transform.gameObject.CompareTag("Player"))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
             {
 
                 caminar = false;
-                 EnemyAnimator.SetTrigger("ataque_corredor");
+                
+                EnemyAnimator.SetTrigger("ataque_corredor");
 
                 
             }
@@ -117,10 +123,11 @@ public class Enemigos : MonoBehaviour
         }
         else if (variante == "tanque")
         {
-            if (Physics.SphereCast(transform.position, RadioDeAtaque, transform.right, out RaycastHit Attackhit, RadioMaximoDeAtaque))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
+            if (Physics.SphereCast(transform.position, RadioDeAtaque, transform.right, out RaycastHit Attackhit, RadioMaximoDeAtaque) && Attackhit.transform.gameObject.CompareTag("Player"))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
             {
-
+                
                 caminar = false;
+                
                 EnemyAnimator.SetTrigger("tanque_attack");
                     
 
@@ -130,25 +137,12 @@ public class Enemigos : MonoBehaviour
 
             }
         }
-        else if (variante == "mago")
+        else if (variante == "mago")//Nota: El mago es el único que no usa los radios de ataque. Su rango de ataque es prácticamente infinito, por lo que dispara todo el rato
         {
             
-
-            if (Physics.SphereCast(transform.position, RadioDeAtaque, transform.right, out RaycastHit Attackhit, RadioMaximoDeAtaque) || Physics.SphereCast(transform.position, RadioDeAtaque, transform.forward, out  Attackhit, RadioMaximoDeAtaque))//CORREGIR. TEN EN CUENTA QUE, SI ESTA CERCA EL ENEMIGO DEL JUGADOR, NO DEBE MOVERSE, SINO ATACAR
-            {
-                EnemyAnimator.SetBool("MagoAttackCharge", true);
+            StartCoroutine(MagoCargaAtaque());
 
 
-
-
-
-            }
-            else
-            {
-                EnemyAnimator.SetBool("MagoAttackCharge", false);
-                
-                
-            }
         }
     }
 
@@ -162,8 +156,26 @@ public class Enemigos : MonoBehaviour
     {
         float hE = Posicionjugador.transform.position.x - transform.position.x;
         float vE = Posicionjugador.transform.position.z - transform.position.z;
+        if (variante == "mago")
+        {
 
-        if (caminar == true)
+            if (hE > 0 || hE > 0 && vE > 0 || hE > 0 && vE < 0)
+            {
+
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+            else if (hE < 0 || hE < 0 && vE > 0 || hE < 0 && vE < 0)
+            {
+
+                transform.eulerAngles = new Vector3(0, 180, 0);
+            }
+            else if (vE > 0 || vE < 0)
+            {
+
+            }
+        }
+
+            if (caminar == true)
         {
             if (variante == "corredor")
             {
@@ -242,6 +254,23 @@ public class Enemigos : MonoBehaviour
             transform.position = new Vector3(-3, 4, -5);
 
         }
+    }
+    IEnumerator MagoCargaAtaque()
+    {
+        if (EnemyAnimator.GetBool("Mago_attacking") == false )
+        {
+            yield return new WaitForSeconds(3);
+            
+            EnemyAnimator.SetBool("MagoAttackCharge", true);
+            yield return new WaitForSeconds(1);
+            if (Time.timeScale != 0)
+            {
+                EnemySounds.PlayOneShot(SoundsArray[0]);
+            }
+            StopAllCoroutines();
+        }
+        
+        
     }
 
 }

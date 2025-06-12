@@ -9,6 +9,9 @@ using System.Security.Cryptography;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
+    
+
+
     [SerializeField] GUI_SO Play_GUI_SO;
     public bool PlayerIsDefeated;
     [SerializeField]GameObject sprite_personaje;
@@ -33,6 +36,7 @@ public class MovimientoPersonaje : MonoBehaviour
     
     void Start()
     {
+        
         PlayerTakesDamage = false;
         
         PlayerIsDefeated = false;
@@ -46,7 +50,7 @@ public class MovimientoPersonaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
         ElJugadorPierde();
 
         TextVida.SetText("Vida: " + vida);

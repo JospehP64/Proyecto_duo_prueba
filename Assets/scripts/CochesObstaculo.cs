@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CochesObstaculo : MonoBehaviour
 {
+
+    [SerializeField] AudioClip SoundsArray;
+    [SerializeField] AudioSource ObstacleSounds;
     Rigidbody rb;
     [SerializeField] Datos_Balas Balas_SO;//Scriptable Object para las balas o proyectiles
     [SerializeField] float VelocidadDeCoches;// velocidad de esta bala   
@@ -14,6 +17,11 @@ public class CochesObstaculo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (Time.timeScale != 0)
+        {
+            ObstacleSounds.PlayOneShot(SoundsArray);
+        }
+
         PlayerTargetPosition = GameObject.FindGameObjectWithTag(TagDeObjetivo);
 
 
@@ -21,6 +29,7 @@ public class CochesObstaculo : MonoBehaviour
 
         direccionCoche = PlayerTargetPosition.transform.position - transform.position;
         tiempodeBala = Balas_SO.tiempoDeVida;
+        
     }
 
     // Update is called once per frame
@@ -31,7 +40,11 @@ public class CochesObstaculo : MonoBehaviour
     
     void MovimientoDeCoche()
     {
-            
+        if (Time.timeScale == 0)
+        {
+            ObstacleSounds.Stop();
+        }
+        direccionCoche = direccionCoche.normalized;
         rb.MovePosition(transform.position + (direccionCoche * VelocidadDeCoches * Time.fixedDeltaTime));
         Destroy(gameObject, 5);
 
